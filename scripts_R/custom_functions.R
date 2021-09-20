@@ -8,20 +8,20 @@
 
 #
 ReadDataset <- function(file, delim = "\t"){
-  df <- read_delim(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
+  df <- readr::read_delim(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
                    col_types = cols()) %>%
-    rename_with(.fn = ~ str_replace_all(.x, " ", "_"), .cols = everything()) %>%
-    mutate(across(.cols = everything(), as.character))
+    janitor::clean_names() %>%
+    dplyr::mutate(across(.cols = everything(), as.character))
 }
 
 # strip the "<<<" from the Query_item columns
 StripBrackets <- function(df){
   df <- df %>%
-    mutate(
-      Query_item = str_remove_all(Query_item, "(<<<|>>>)") %>%
-        str_trim(),
-      Tagged_query_item = str_remove_all(Tagged_query_item, "(<<<|>>>)") %>%
-        str_trim()
+    dplyr::mutate(
+      query_item = stringr::str_remove_all(query_item, "(<<<|>>>)") %>%
+        stringr::str_trim(),
+      tagged_query_item = stringr::str_remove_all(tagged_query_item, "(<<<|>>>)") %>%
+        stringr::str_trim()
     )
   return(df)
 }
@@ -65,7 +65,7 @@ GetVerb <- function(token){
 
 # get the variant (-ed vs. -ing form) for the token
 GetVariant <- function(token){
-  form <- str_split(token, " ", simplify = T) %>%
+  form <- stringr::str_split(token, " ", simplify = T) %>%
     last()
   variant <- ifelse(form %in% c("sat", "stood"), "ed", "ing")
   return(variant)
@@ -74,9 +74,9 @@ GetVariant <- function(token){
 # make a column with simplified context, e.g. 2 words to the left and 6 words to
 # the right of the token
 MakeContext <- function(before, item, after, n1 = 1, n2 = 6){
-  before_words <- str_split(before, " ", simplify = T)
+  before_words <- stringr::str_split(before, " ", simplify = T)
   len_b <- length(before_words)
-  after_words <- str_split(after, " ", simplify = T)
+  after_words <- stringr::str_split(after, " ", simplify = T)
   text <- c(before_words[(len_b - n1):len_b], item, after_words[1:n2])
 
   return(paste(text, collapse = " "))
@@ -84,7 +84,7 @@ MakeContext <- function(before, item, after, n1 = 1, n2 = 6){
 
 # get the following material after the token
 GetPostmodifier <- function(after){
-  first_word <- str_split(after, " ", simplify = T) %>%
+  first_word <- stringr::str_split(after, " ", simplify = T) %>%
     first()
   if(grepl("_(rp|ii|RP|II)", first_word)){
     postm <- "PP"
@@ -98,7 +98,7 @@ GetPostmodifier <- function(after){
 # get the subject of the token
 GetSubject <- function(token, before){
   if(grepl("^'", token)){
-    subj <- str_split(before, " ") %>%
+    subj <- stringr::str_split(before, " ") %>%
       unlist() %>%
       last() %>%
       tolower()
@@ -107,7 +107,7 @@ GetSubject <- function(token, before){
   } else {
     # take the last noun or pronoun in the preceding context as the most likely
     # subject
-    before_words <- str_split(before, " ") %>%
+    before_words <- stringr::str_split(before, " ") %>%
       unlist()
     subj <- before_words[grepl("_[np]\\S+", before_words, ignore.case = T)] %>%
       last() %>%
@@ -135,7 +135,7 @@ GetTenseAspect <- function(token, before){
   } else if(grepl("_vbd", token, ignore.case = T)){
     tense <- "past"
   } else {
-    before_words <- str_split(before, " ") %>%
+    before_words <- stringr::str_split(before, " ") %>%
       unlist()
     last_word <- before_words[grepl("_(vm|vh|to)", before_words, ignore.case = T)] %>%
       last()
@@ -152,3 +152,78 @@ GetTenseAspect <- function(token, before){
 
   return(tense)
 }
+
+
+
+# functions for plotting --------------------------------------------------
+
+BarPlot <- function(data, x, fill,
+                    bar_colors = c("#FEC260", "#A12568"),
+                    text_colors = c("grey10", "white"),
+                    facet_by = NULL,
+                    caption = ""
+  ){
+  require(dplyr)
+  require(ggplot2)
+
+  x_var <- rlang::enquo(x)
+  fill_var <- rlang::enquo(fill)
+
+  data <- data %>%
+    mutate(across(c(!! x_var, !! fill_var), as.factor))
+
+  x_levs <- data %>%
+    pull(!!x_var) %>%
+    levels()
+
+  n_x_levs <- length(x_levs)
+
+  fill_levs <- data %>%
+    pull(!!fill_var) %>%
+    as.factor() %>%
+    levels()
+
+  if(is.null(facet_by)){
+    counts <- data %>%
+      group_by(!! x_var, !! fill_var) %>%
+      summarise(n = n()) %>%
+      mutate(
+        place = ifelse(!! fill_var == fill_levs[1], .98, .02),
+        color = ifelse(!! fill_var == fill_levs[1], "a", "b"))
+    x_nlevs <- data %>%
+      pull(!!x_var) %>%
+      nlevels()
+    p <- data %>%
+      ggplot(aes(x = fct_reorder(!! x_var, as.numeric(!! fill_var), .fun = mean),
+                 fill = !! fill_var)) +
+      geom_bar(position = "fill", color = "#000000", width = .8) +
+      geom_text(
+        data = counts,
+        size = 6,
+        fontface = "bold",
+        aes(x = !! x_var, y = place, label = n, color = color),
+        hjust = rep(c(1, 0), length(x_levs))
+      ) +
+      annotate(geom = "text", y = 1, x = n_x_levs + 0.5, hjust = 1, fontface = 'italic',
+               label = "sat", color = "grey90", vjust = 0, size = 6) +
+      annotate(geom = "text", y = 0, x = n_x_levs + 0.5,  hjust = 0, fontface = 'italic',
+               label = "sitting", color = "grey90", vjust = 0, size = 6) +
+      labs(x = "", y = "Percentage of tokens", caption = caption) +
+      scale_fill_manual(guide = "none", values = bar_colors) +
+      scale_color_manual(guide = "none", values = text_colors) +
+      scale_y_continuous(labels = scales::percent, limits = c(0,1)) +
+      # coord_flip() +
+      theme(
+        legend.position = "bottom",
+        panel.grid = element_blank(),
+        strip.text = element_text(hjust = 0, size = 14, face = "bold"),
+        axis.text.y = element_text(size = 16),
+        axis.line.x = element_line(color = "grey90"),
+        axis.ticks.y = element_blank()
+      ) +
+      lemon::coord_capped_flip(bottom = 'both', gap = 0)
+
+  }
+  return(p)
+}
+
