@@ -88,13 +88,6 @@ glowbe_counts <- glowbe_data_processed %>%
     ) %>%
   count()
 
-glowbe_counts$words_mil <- rep(
-  round(c(386.8, 134.8, 387.6, 101, 148.2, 81.4, 96.4,
-                                 46.6, 51.4, 39.5, 43, 41.6, 43.2, 40.5, 45.4,
-                                 42.6, 38.8, 41.1, 35.2, 39.6), 2),
-      each = 2)
-  )
-
 p1 <- glowbe_counts %>%
   dplyr::filter(variant == "ed") %>%
   mutate(per_mil = n/words_mil) %>%
