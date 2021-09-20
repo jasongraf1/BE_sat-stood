@@ -136,10 +136,35 @@ bnc_data_processed %>%
   saveRDS(here("data_processed", "data_BE_sat_bnc.rds"))
 
 
+# Bank of English data ----------------------------------------------------
 
+# There are some parsing erros in the data, but we ignore these for now
+bank_of_E_data_raw <- here("data_raw") %>%
+  list.files(pattern = "bank_of_E", full.names = TRUE) %>%
+  map_df(ReadDataset)
 
+bank_of_E_data_raw %>%
+  glimpse()
 
+bank_of_E_data_processed <- bank_of_E_data_raw %>%
+  StripBrackets() %>%
+  mutate(
+    variant = map_chr(Query_item, GetVariant),
+    verb = map_chr(Query_item, GetVerb),
+    subj = map2_chr(Query_item, Tagged_context_before, GetSubject),
+    subj_person = map_chr(subj, GetSubjectPerson),
+    tense_aspect = map2_chr(Tagged_query_item, Tagged_context_before, GetTenseAspect),
+    postmodifier = map_chr(Tagged_context_after, GetPostmodifier),
+    token_simple = pmap_chr(list(Context_before, Query_item, Context_after), MakeContext)
+  )
 
+bank_of_E_data_processed %>%
+  glimpse()
+
+# save as compact file
+bank_of_E_data_processed %>%
+  rownames_to_column("Token_ID") %>%
+  saveRDS(here("data_processed", "data_BE_sat_bnc.rds"))
 
 
 
