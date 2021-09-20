@@ -113,7 +113,7 @@ GetSubject <- function(token, before){
       last() %>%
       tolower()
   }
-  return(str_remove(subj, "_.*"))
+  return(subj)
 }
 
 GetSubjectPerson <- function(subj){
