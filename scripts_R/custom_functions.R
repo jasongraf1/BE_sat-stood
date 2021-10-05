@@ -83,16 +83,33 @@ MakeContext <- function(before, item, after, n1 = 1, n2 = 6){
 }
 
 # get the following material after the token
-GetPostmodifier <- function(after){
+GetPostmodifierPP <- function(after){
   first_word <- stringr::str_split(after, " ", simplify = T) %>%
     first()
   if(grepl("_(rp|ii|RP|II)", first_word)){
-    postm <- "PP"
-  } else if(grepl("_(v.g|V.G)", first_word)){
-    postm <- "VP"
-  } else postm <- "none"
+    postm <- "y"
+  } else postm <- "n"
 
   return(postm)
+}
+
+GetPostmodifierVP <- function(after){
+  words <- stringr::str_split(after, " ") %>%
+    unlist()
+  first_words <- words[1:3]
+  if(any(grepl("_(v.g|V.G)", first_words))){
+    postm <- "y"
+  } else postm <- "n"
+
+  return(postm)
+}
+
+CheckHorroAequi <- function(after){
+  if(grepl("^\\w+_(v.g|V.G)", after)){
+    horror <- "y"
+  } else horror <- "n"
+
+  return(horror)
 }
 
 # get the subject of the token
@@ -154,7 +171,6 @@ GetTenseAspect <- function(token, before){
 }
 
 
-
 # functions for plotting --------------------------------------------------
 
 BarPlot <- function(data, x, fill,
@@ -205,9 +221,9 @@ BarPlot <- function(data, x, fill,
         hjust = rep(c(1, 0), length(x_levs))
       ) +
       annotate(geom = "text", y = 1, x = n_x_levs + 0.5, hjust = 1, fontface = 'italic',
-               label = "sat", color = "grey90", vjust = 0, size = 6) +
+               label = "-ed", color = "grey90", vjust = 0, size = 6) +
       annotate(geom = "text", y = 0, x = n_x_levs + 0.5,  hjust = 0, fontface = 'italic',
-               label = "sitting", color = "grey90", vjust = 0, size = 6) +
+               label = "-ing", color = "grey90", vjust = 0, size = 6) +
       labs(x = "", y = "Percentage of tokens", caption = caption) +
       scale_fill_manual(guide = "none", values = bar_colors) +
       scale_color_manual(guide = "none", values = text_colors) +
@@ -216,14 +232,57 @@ BarPlot <- function(data, x, fill,
       theme(
         legend.position = "bottom",
         panel.grid = element_blank(),
+        plot.title = ggtext::element_markdown(size = rel(1.3), color = text_col, hjust = .1),
         strip.text = element_text(hjust = 0, size = 14, face = "bold"),
         axis.text.y = element_text(size = 16),
         axis.line.x = element_line(color = "grey90"),
         axis.ticks.y = element_blank()
       ) +
       lemon::coord_capped_flip(bottom = 'both', gap = 0)
+  } else {
+    facet_var <- rlang::enquo(facet_by)
 
+    counts <- data %>%
+      group_by(!!x_var, !!fill_var, !!facet_var) %>%
+      summarise(n = n()) %>%
+      mutate(
+        place = ifelse(!! fill_var == fill_levs[1], .98, .02),
+        color = ifelse(!! fill_var == fill_levs[1], "a", "b"))
+    x_nlevs <- data %>%
+      pull(!!x_var) %>%
+      nlevels()
+    p <- data %>%
+      ggplot(aes(x = fct_reorder(!! x_var, as.numeric(!! fill_var), .fun = mean),
+                 fill = !! fill_var)) +
+      geom_bar(position = "fill", color = "#000000", width = .8) +
+      geom_text(
+        data = counts,
+        size = 6,
+        fontface = "bold",
+        aes(x = !! x_var, y = place, label = n, color = color),
+        hjust = rep(c(1, 0), length(x_levs))
+      ) +
+      annotate(geom = "text", y = 1, x = n_x_levs + 0.5, hjust = 1, fontface = 'italic',
+               label = "-ed", color = "grey90", vjust = 0, size = 6) +
+      annotate(geom = "text", y = 0, x = n_x_levs + 0.5,  hjust = 0, fontface = 'italic',
+               label = "-ing", color = "grey90", vjust = 0, size = 6) +
+      labs(x = "", y = "Percentage of tokens", caption = caption) +
+      scale_fill_manual(guide = "none", values = bar_colors) +
+      scale_color_manual(guide = "none", values = text_colors) +
+      scale_y_continuous(labels = scales::percent, limits = c(0,1)) +
+      facet_wrap(vars(!!facet_var), ncol = 2) +
+      theme(
+        legend.position = "bottom",
+        panel.grid = element_blank(),
+        plot.title = ggtext::element_markdown(size = rel(1.3), color = text_col, hjust = .1),
+        strip.text = element_text(hjust = 0, size = 14, face = "bold"),
+        axis.text.y = element_text(size = 16),
+        axis.line.x = element_line(color = "grey90"),
+        axis.ticks.y = element_blank()
+      ) +
+      lemon::coord_capped_flip(bottom = 'both', gap = 0)
   }
+
   return(p)
 }
 
