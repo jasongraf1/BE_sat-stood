@@ -35,7 +35,7 @@ glowbe_data_processed <- glowbe_data_raw %>%
     tense_aspect = map2_chr(tagged_query_item, tagged_context_before, GetTenseAspect),
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
-    horror_aequi = map_chr(tagged_context_after, CheckHorroAequi),
+    dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
     token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
     )
 
@@ -55,6 +55,7 @@ glowbe_data_processed <- glowbe_data_processed %>%
 # save as compact file
 glowbe_data_processed %>%
   rownames_to_column("token_ID") %>%
+  distinct(token_simple, .keep_all = TRUE) %>%
   saveRDS(here("data_processed", "data_BE_sat_glowbe.rds"))
 
 rm(glowbe_data_raw, glowbe_data_processed)
@@ -134,7 +135,7 @@ bnc_data_processed <- bnc_data_raw %>%
     tense_aspect = map2_chr(tagged_query_item, tagged_context_before, GetTenseAspect),
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
-    horror_aequi = map_chr(tagged_context_after, CheckHorroAequi),
+    dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
     token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
   )
 
@@ -172,10 +173,9 @@ bank_of_E_data_processed <- bank_of_E_data_raw %>%
     tense_aspect = map2_chr(tagged_query_item, tagged_context_before, GetTenseAspect),
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
-    horror_aequi = map_chr(tagged_context_after, CheckHorroAequi),
+    dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
     token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
   )
-
 
 # check data
 # bank_of_E_data_processed %>%
@@ -192,6 +192,7 @@ bank_of_E_data_processed <- bank_of_E_data_processed %>%
 # save as compact file
 bank_of_E_data_processed %>%
   rownames_to_column("token_ID") %>%
+  distinct(token_simple, .keep_all = TRUE) %>% # remove duplicates
   saveRDS(here("data_processed", "data_BE_sat_bank_of_E.rds"))
 
 rm(bank_of_E_data_raw, bank_of_E_data_processed)
