@@ -2,7 +2,7 @@
 # File: custom_functions.R
 #
 # Description:
-# Custom defined functions for dat wrangling and analysis of the corpus data
+# Custom defined functions for data wrangling and analysis of the corpus data
 # in the *BE sat/stood* project
 # -------------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ GetPostmodifierPP <- function(after){
 GetPostmodifierVP <- function(after){
   words <- stringr::str_split(after, " ") %>%
     unlist()
-  first_words <- words[1:3]
+  first_words <- words[1:4]
   if(any(grepl("_(v.g|V.G)", first_words))){
     postm <- "y"
   } else postm <- "n"
@@ -104,10 +104,13 @@ GetPostmodifierVP <- function(after){
   return(postm)
 }
 
-CheckHorroAequi <- function(after){
-  if(grepl("^\\w+_(v.g|V.G)", after)){
-    horror <- "y"
-  } else horror <- "n"
+CheckHorroAequi <- function(after, post_vp){
+  if(post_vp == "y"){
+    words <- stringr::str_split(after, " ") %>%
+      unlist()
+    first_words <- words[1:4]
+    horror <- which(grepl("_(v.g|V.G)", first_words))[1]
+  } else horror <- NA
 
   return(horror)
 }
@@ -158,7 +161,7 @@ GetTenseAspect <- function(token, before){
       last()
     if(grepl("_vm", last_word, ignore.case = T)){
       tense <- "modal"
-    } else if(grepl("_vh0", last_word, ignore.case = T)){
+    } else if(grepl("_vh[0gzi]", last_word, ignore.case = T)){
       tense <- "presperf"
     } else if(grepl("_vhd", last_word, ignore.case = T)){
       tense <- "pastperf"
@@ -176,7 +179,7 @@ GetTenseAspect <- function(token, before){
 BarPlot <- function(data, x, fill,
                     bar_colors = c("#FEC260", "#A12568"),
                     text_colors = c("grey10", "white"),
-                    facet_by = NULL,
+                    facet_by = NULL, sort = TRUE,
                     caption = ""
   ){
   require(dplyr)
@@ -209,10 +212,15 @@ BarPlot <- function(data, x, fill,
     x_nlevs <- data %>%
       pull(!!x_var) %>%
       nlevels()
-    p <- data %>%
-      ggplot(aes(x = fct_reorder(!! x_var, as.numeric(!! fill_var), .fun = mean),
-                 fill = !! fill_var)) +
-      geom_bar(position = "fill", color = "#000000", width = .8) +
+    if(sort == T){
+      p <- data %>%
+        ggplot(aes(x = fct_reorder(!! x_var, as.numeric(!! fill_var), .fun = mean),
+                 fill = !! fill_var))
+    } else {
+      p <- data %>%
+        ggplot(aes(x = !! x_var, fill = !! fill_var))
+    }
+    p <- p + geom_bar(position = "fill", color = "#000000", width = .8) +
       geom_text(
         data = counts,
         size = 6,
@@ -220,10 +228,10 @@ BarPlot <- function(data, x, fill,
         aes(x = !! x_var, y = place, label = n, color = color),
         hjust = rep(c(1, 0), length(x_levs))
       ) +
-      annotate(geom = "text", y = 1, x = n_x_levs + 0.5, hjust = 1, fontface = 'italic',
-               label = "-ed", color = "grey90", vjust = 0, size = 6) +
-      annotate(geom = "text", y = 0, x = n_x_levs + 0.5,  hjust = 0, fontface = 'italic',
-               label = "-ing", color = "grey90", vjust = 0, size = 6) +
+      # annotate(geom = "text", y = 1, x = n_x_levs + 0.5, hjust = 1, fontface = 'italic',
+      #          label = "-ed", color = "grey90", vjust = 0, size = 6) +
+      # annotate(geom = "text", y = 0, x = n_x_levs + 0.5,  hjust = 0, fontface = 'italic',
+      #          label = "-ing", color = "grey90", vjust = 0, size = 6) +
       labs(x = "", y = "Percentage of tokens", caption = caption) +
       scale_fill_manual(guide = "none", values = bar_colors) +
       scale_color_manual(guide = "none", values = text_colors) +
