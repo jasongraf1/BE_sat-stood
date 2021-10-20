@@ -170,7 +170,7 @@ p2 <- glowbe_counts %>%
   lemon::coord_capped_flip(bottom = "left", gap = 0)
 
 ### Combined
-(p1 + p2) +
+p_comb <- p3/(p1 + p2) +
   plot_annotation(
     caption = "Frequency per million words",
     theme = theme(plot.caption = element_text(hjust = 0.5, size = 14))
@@ -179,15 +179,26 @@ p2 <- glowbe_counts %>%
 ggsave(
   "glowbe_frequencies.emf",
   device = "wmf",
+  plot = p_comb,
+  path = here("figures"),
+  width = 10,
+  height = 6.8
+)
+
+ggsave(
+  "glowbe_frequencies.png",
+  device = "png",
+  plot = p_comb,
   path = here("figures"),
   width = 10,
   height = 6.8
 )
 
 
+
 ## Distance to post VP plot ------------
 
-glowbe_data_uk %>%
+glowbe_HE_barplot <- glowbe_data_uk %>%
   filter(postmodifier_vp == "Yes") %>%
   # mutate(dist_to_post_vp = factor(dist_to_post_vp, levels = c("1", "2", "3", "4"))) %>%
   mutate(dist_to_post_vp = as.numeric(dist_to_post_vp)) %>%
@@ -200,11 +211,20 @@ glowbe_data_uk %>%
 ggsave(
   "glowbe_horror_aequi.emf",
   device = "wmf",
+  plot = glowbe_HE_barplot,
   path = here("figures"),
   width = 4.8,
   height = 3.2
 )
 
+ggsave(
+  "glowbe_horror_aequi.png",
+  device = "png",
+  plot = glowbe_HE_barplot,
+  path = here("figures"),
+  width = 4.8,
+  height = 3.2
+)
 
 ## Test for horror aequi effects ------------
 
@@ -251,6 +271,15 @@ ggsave(
   height = 3.2
 )
 
+ggsave(
+  "glowbe_horror_aequi_model.png",
+  plot = glowbe_HE_model,
+  device = "png",
+  path = here("figures"),
+  width = 4.8,
+  height = 3.2
+)
+
 
 # BofE distributions ------------------------------------------------------
 
@@ -262,7 +291,7 @@ names(bofe_text) <- names(glowbe_dark)
 bofe_dark["GB"] <- "#9ad2fc"
 bofe_text["GB"] <- "#9ad2fc"
 
-bank_of_E_data_processed %>%
+bank_of_E_plot <- bank_of_E_data_processed %>%
   filter(!text_genre %in% c("ephemera", "journal")) %>%
   mutate(
     across(c(country, text_genre, variant), ~ as.factor(.x)),
@@ -307,14 +336,26 @@ bank_of_E_data_processed %>%
 ggsave(
   "bank_of_E_genre.emf",
   device = "wmf",
+  plot = bank_of_E_plot,
   path = here("figures"),
   width = 8.7,
   height = 5
 )
 
+ggsave(
+  "bank_of_E_genre.png",
+  device = "png",
+  plot = bank_of_E_plot,
+  path = here("figures"),
+  width = 8.7,
+  height = 5
+)
+
+
 ## Plot register over time proportions for UK ------------
 reg_cols <- c("#6F69AC", "#95DAC1", "#FFEBA1", "#FD6F96") %>% rev()
 
+### Combined proportion over time
 bank_of_E_data_processed %>%
   mutate(country = fct_recode(country, GB = "UK")) %>%
   filter(country == "GB") %>%
@@ -330,7 +371,8 @@ bank_of_E_data_processed %>%
   ggplot(aes(year, prop)) +
   geom_line(aes(group = 1), color = text_col, size = 1)
 
-bank_of_E_data_processed %>%
+### Prop over time by register
+bank_of_E_genre_time_plot <- bank_of_E_data_processed %>%
   filter(!text_genre %in% c("ephemera", "journal")) %>%
   mutate(country = fct_recode(country, GB = "UK")) %>%
   filter(country == "GB") %>%
@@ -359,6 +401,16 @@ bank_of_E_data_processed %>%
 ggsave(
   "bank_of_E_genre_time_UK.emf",
   device = "wmf",
+  plot = bank_of_E_genre_time_plot,
+  path = here("figures"),
+  width = 8.7,
+  height = 5
+)
+
+ggsave(
+  "bank_of_E_genre_time_UK.png",
+  device = "png",
+  plot = bank_of_E_genre_time_plot,
   path = here("figures"),
   width = 8.7,
   height = 5
@@ -368,7 +420,7 @@ ggsave(
 # BNC distributions -------------------------------------------------------
 
 ## Plot proportions by dialect region ------------
-bnc_data_processed %>%
+bnc_region4_plot <- bnc_data_processed %>%
   dplyr::filter(!is.na(region4)) %>%
   group_by(region4, variant, .drop = F) %>%
   count() %>%
@@ -404,6 +456,16 @@ bnc_data_processed %>%
 ggsave(
   "bnc_region4_dist.emf",
   device = "wmf",
+  plot =bnc_region4_plot,
+  path = here("figures"),
+  width = 6,
+  height = 4.1
+)
+
+ggsave(
+  "bnc_region4_dist.png",
+  device = "png",
+  plot = bnc_region4_plot,
   path = here("figures"),
   width = 6,
   height = 4.1
@@ -411,11 +473,15 @@ ggsave(
 
 
 ## Plot sex effect  ------------
+### relevel the response to predict 'sat'
 bnc_data_processed2 <- bnc_data_processed %>%
   mutate(variant = as.factor(variant),
          variant = relevel(variant, ref = "ing"))
 
-bnc_gender_model <- glm(variant ~ verb * gender, bnc_data_processed2, family = binomial) %>%
+summary(bnc_gender_model <- glm(variant ~ verb * gender, bnc_data_processed2, family = binomial))
+
+### sit on left, stand on right
+bnc_gender_effect_plot <- bnc_gender_model %>%
   effects::Effect(c("gender", "verb"), .) %>%
   as.data.frame() %>%
   ggplot(aes(gender, fit)) +
@@ -436,8 +502,17 @@ bnc_gender_model <- glm(variant ~ verb * gender, bnc_data_processed2, family = b
 
 ggsave(
   "bnc_gender_model.emf",
-  plot = bnc_gender_model,
+  plot = bnc_gender_effect_plot,
   device = "wmf",
+  path = here("figures"),
+  width = 6,
+  height = 3.4
+)
+
+ggsave(
+  "bnc_gender_model.png",
+  plot = bnc_gender_effect_plot,
+  device = "png",
   path = here("figures"),
   width = 6,
   height = 3.4
