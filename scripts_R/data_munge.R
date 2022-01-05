@@ -58,6 +58,11 @@ glowbe_data_processed %>%
   distinct(token_simple, .keep_all = TRUE) %>%
   saveRDS(here("data_processed", "data_BE_sat_glowbe.rds"))
 
+glowbe_data_processed %>%
+  rownames_to_column("token_ID") %>%
+  distinct(token_simple, .keep_all = TRUE) %>%
+  vroom::vroom_write(here("data_processed", "data_BE_sat_glowbe.txt"), delim = "\t")
+
 rm(glowbe_data_raw, glowbe_data_processed)
 
 # BNC data ----------------------------------------------------------------
