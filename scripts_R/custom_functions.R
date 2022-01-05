@@ -8,7 +8,7 @@
 
 #
 ReadDataset <- function(file, delim = "\t"){
-  df <- readr::read_delim(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
+  df <- vroom::vroom(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
                    col_types = cols()) %>%
     janitor::clean_names() %>%
     dplyr::mutate(across(.cols = everything(), as.character))
