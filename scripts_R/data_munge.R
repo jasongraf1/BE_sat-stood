@@ -232,7 +232,7 @@ clmet_data_clean %>%
 
 # clean up the Early English Books Online v3 data
 eebo_data_raw <- here("data_raw") %>%
-  list.files(pattern = "EEBOv3", full.names = TRUE) %>%
+  list.files(pattern = "BE.*EEBOv3", full.names = TRUE) %>%
   map_df(ReadDataset)
 
 eebo_data_processed <- eebo_data_raw %>%
