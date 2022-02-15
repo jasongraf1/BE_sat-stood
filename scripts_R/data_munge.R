@@ -232,7 +232,7 @@ eebo_data_raw <- here("data_raw") %>%
   list.files(pattern = "EEBOv3", full.names = TRUE) %>%
   map_df(ReadDataset)
 
-eebo_data_raw_clean <- eebo_data_raw %>%
+eebo_data_processed <- eebo_data_raw %>%
   distinct(context_before, query_item, context_after, .keep_all = T) %>%
   dplyr::filter(!grepl("[Bb]eing", query_item)) %>%
   mutate(
@@ -248,6 +248,13 @@ eebo_data_raw_clean <- eebo_data_raw %>%
     token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
   )
 
+# save to file
+bank_of_E_data_processed %>%
+  rownames_to_column("token_ID") %>%
+  distinct(token_simple, .keep_all = TRUE) %>% # remove duplicates
+  vroom::vroom_write(here("data_processed", "data_BE_sat_bank_of_E.txt"), delim = "\t")
+
+rm(bank_of_E_data_raw, bank_of_E_data_processed)
 
 
 
