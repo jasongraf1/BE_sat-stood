@@ -11,6 +11,9 @@
 # Libs
 library(tidyverse)
 library(here)
+library(vroom)
+
+options(readr.show_col_types = FALSE)
 
 source(here("scripts_R", "custom_functions.R"))
 
@@ -53,10 +56,10 @@ glowbe_data_processed <- glowbe_data_processed %>%
 #   glimpse()
 
 # save as compact file
-glowbe_data_processed %>%
-  rownames_to_column("token_ID") %>%
-  distinct(token_simple, .keep_all = TRUE) %>%
-  saveRDS(here("data_processed", "data_BE_sat_glowbe.rds"))
+# glowbe_data_processed %>%
+#   rownames_to_column("token_ID") %>%
+#   distinct(token_simple, .keep_all = TRUE) %>%
+#   saveRDS(here("data_processed", "data_BE_sat_glowbe.rds"))
 
 glowbe_data_processed %>%
   rownames_to_column("token_ID") %>%
@@ -74,8 +77,8 @@ rm(glowbe_data_raw, glowbe_data_processed)
 # All these datasets are then combined.
 ReadDataset2 <- function(file, delim = "\t"){
   location <- str_remove_all(file, "(.*BE_sat_|_BNC2014.txt)")
-  df <- read_delim(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
-                   col_types = cols()) %>%
+  df <- vroom(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
+              show_col_types = FALSE) %>%
     janitor::clean_names() %>%
     mutate(
       across(.cols = everything(), as.character),
@@ -90,8 +93,8 @@ bnc_data_region4_raw <- here("data_raw") %>%
 
 ReadDataset3 <- function(file, delim = "\t"){
   location <- str_remove_all(file, "(.*BE_sat_|_r3_BNC2014.txt)")
-  df <- read_delim(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
-                   col_types = cols()) %>%
+  df <- vroom(file, delim = delim, escape_double = FALSE, trim_ws = TRUE,
+              show_col_types = FALSE) %>%
     janitor::clean_names() %>%
     mutate(
       across(.cols = everything(), as.character),
@@ -148,10 +151,10 @@ bnc_data_processed <- bnc_data_raw %>%
 # bnc_data_processed %>%
 #   glimpse()
 
-# save as compact file
+# save to file
 bnc_data_processed %>%
   rownames_to_column("token_id") %>%
-  saveRDS(here("data_processed", "data_BE_sat_bnc.rds"))
+  vroom::vroom_write(here("data_processed", "data_BE_sat_bnc.txt"), delim = "\t")
 
 rm(bnc_data_raw, bnc_data_processed, bnc_data_region3_raw, bnc_data_region4_raw,
    male, female, bnc_data_gender_raw)
@@ -194,13 +197,14 @@ bank_of_E_data_processed <- bank_of_E_data_processed %>%
   dplyr::filter(!(verb == "stand" & grepl("down ", context_after))) %>%
   dplyr::filter(country %in% c("UK", "USA", "Canada", "Australia", "New Zealand", "South Africa", "India"))
 
-# save as compact file
+# save to file
 bank_of_E_data_processed %>%
   rownames_to_column("token_ID") %>%
   distinct(token_simple, .keep_all = TRUE) %>% # remove duplicates
-  saveRDS(here("data_processed", "data_BE_sat_bank_of_E.rds"))
+  vroom::vroom_write(here("data_processed", "data_BE_sat_bank_of_E.txt"), delim = "\t")
 
 rm(bank_of_E_data_raw, bank_of_E_data_processed)
+
 
 # CLMET data --------------------------------------------------------------
 
@@ -219,5 +223,35 @@ clmet_data_clean %>%
 
 clmet_data_clean %>%
   write_delim(here("data_raw", "BE_sat_CLMET_clean.txt"), delim = "\t")
+
+
+# EEBO data ---------------------------------------------------------------
+
+# clean up the Early English Books Online v3 data
+eebo_data_raw <- here("data_raw") %>%
+  list.files(pattern = "EEBOv3", full.names = TRUE) %>%
+  map_df(ReadDataset)
+
+eebo_data_raw_clean <- eebo_data_raw %>%
+  distinct(context_before, query_item, context_after, .keep_all = T) %>%
+  mutate(
+    variant = map_chr(query_item, GetVariant),
+    verb = map_chr(query_item, GetVerb),
+    subj_tagged = map2_chr(query_item, tagged_context_before, GetSubject),
+    subj = str_remove(subj_tagged, "_.*"),
+    subj_person = map_chr(subj, GetSubjectPerson),
+    tense_aspect = map2_chr(tagged_query_item, tagged_context_before, GetTenseAspect),
+    postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
+    postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
+    dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
+    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
+  )
+
+
+
+
+
+
+
 
 
