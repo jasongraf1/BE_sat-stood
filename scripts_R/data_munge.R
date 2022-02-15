@@ -234,6 +234,7 @@ eebo_data_raw <- here("data_raw") %>%
 
 eebo_data_raw_clean <- eebo_data_raw %>%
   distinct(context_before, query_item, context_after, .keep_all = T) %>%
+  dplyr::filter(!grepl("[Bb]eing", query_item)) %>%
   mutate(
     variant = map_chr(query_item, GetVariant),
     verb = map_chr(query_item, GetVerb),
