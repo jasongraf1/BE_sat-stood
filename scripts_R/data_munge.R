@@ -249,12 +249,11 @@ eebo_data_processed <- eebo_data_raw %>%
   )
 
 # save to file
-bank_of_E_data_processed %>%
+eebo_data_processed %>%
   rownames_to_column("token_ID") %>%
-  distinct(token_simple, .keep_all = TRUE) %>% # remove duplicates
-  vroom::vroom_write(here("data_processed", "data_BE_sat_bank_of_E.txt"), delim = "\t")
+  vroom::vroom_write(here("data_processed", "data_BE_sat_EEOBv3.txt"), delim = "\t")
 
-rm(bank_of_E_data_raw, bank_of_E_data_processed)
+rm(eebo_data_raw, eebo_data_processed)
 
 
 
