@@ -39,7 +39,8 @@ glowbe_data_processed <- glowbe_data_raw %>%
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
     dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
-    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
+    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext),
+    comment = ""
     )
 
 # Cases of passive "BE stood down" are common in AUS and NZ but are not reliable hits.
@@ -144,7 +145,8 @@ bnc_data_processed <- bnc_data_raw %>%
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
     dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
-    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
+    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext),
+    comment = ""
   )
 
 # check data
@@ -182,7 +184,8 @@ bank_of_E_data_processed <- bank_of_E_data_raw %>%
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
     dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
-    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
+    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext),
+    comment = ""
   )
 
 # check data
@@ -245,7 +248,8 @@ eebo_data_processed <- eebo_data_raw %>%
     postmodifier_pp = map_chr(tagged_context_after, GetPostmodifierPP),
     postmodifier_vp = map_chr(tagged_context_after, GetPostmodifierVP),
     dist_to_post_vp = map2_chr(tagged_context_after, postmodifier_vp, CheckHorroAequi),
-    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext)
+    token_simple = pmap_chr(list(context_before, query_item, context_after), MakeContext),
+    comment = ""
   )
 
 # save to file
