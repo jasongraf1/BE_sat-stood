@@ -455,14 +455,14 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
   colpal <- colfunc(breaks)
   # pull out the percentages to color by
   if(v == "sit"){
-    label <- "BE sat/sitting"
+    label <- "% *sat*"
     class <- classIntervals(data$SAT_PERC, breaks, style = "quantile", intervalClosure = "right")
     color_breaks <- quantile(data$SAT_PERC, seq(.1, .9, .1)) |> 
       as.vector()
     data_range <- range(data$SAT_PERC)
     data_median <- median(data$SAT_PERC)
   } else if(v == "stand"){
-    label <- "BE stood/standing"
+    label <- "% *stood*"
     class <- classIntervals(data$STOOD_PERC, breaks, style = "quantile", intervalClosure = "right")
     color_breaks <- quantile(data$STOOD_PERC, seq(.1, .9, .1)) |> 
       as.vector()
@@ -491,13 +491,13 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
       name = label
     ) + 
     geom_rect(aes(xmin = -.48, xmax = .238, ymin = 51.3, ymax = 51.71), 
-              linewidth = .25, color = "white", fill = NA) +
-    labs(caption = "UK Twitter 2014") +
+              linewidth = .3, color = "white", fill = NA) +
+    # labs(caption = "UK Twitter 2014") +
     theme_void() +
     theme(
-      legend.title = element_text(vjust = 1.5, color = legendcol, hjust = .5,
-                                  family = fam),
-      legend.text = element_text(color = legendcol),
+      legend.title = element_markdown(vjust = 1.5, color = legendcol, hjust = .5,
+                                  family = fam, size = 18),
+      legend.text = element_markdown(color = legendcol, family = fam, size = rel(1.2)),
       legend.position = c(.9, .7),
       plot.background = element_rect(fill = bgcol, color = NA),
       plot.caption = element_text(color = legendcol, size = 10, family = fam),
@@ -538,7 +538,7 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
     ) +
     labs(caption = "London") +
     theme_void() + guides(fill = "none") +
-    theme(plot.caption = element_text(size = 10, hjust = 0, color = legendcol,
+    theme(plot.caption = element_text(size = 16, hjust = 0, color = legendcol,
                                       family = fam),
           panel.border = element_rect(fill = NA, color = legendcol))
   
