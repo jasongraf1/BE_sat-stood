@@ -58,7 +58,7 @@ theme_dark <- function (text_col = "white", bg_col = "black") {
 }
 
 # Plot for glowbe frequencies
-PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w = 10,
+PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w = 10,
                                   h = 6.8, dev = c("png", "pdf", "wmf"), dpi = 320){
   require(tidyverse)
   require(patchwork)
@@ -103,10 +103,10 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w 
     glowbe_text["GB"] <- "black"
   }
 
-  p_perc <- df %>%
-    group_by(country_code, variant) %>%
-    count() %>%
-    group_by(country_code) %>%
+  p_perc <- df |>
+    group_by(country_code, variant) |>
+    count() |>
+    group_by(country_code) |>
     mutate(
       prop = n/sum(n),
       perc = paste0(round(100*prop), "%"),
@@ -114,8 +114,8 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w 
       country_code = factor(
         country_code,
         levels = varieties)
-    ) %>%
-    dplyr::filter(variant == "ed") %>%
+    ) |>
+    dplyr::filter(variant == "ed") |>
     ggplot(aes(country_code, prop, fill = country_code)) +
     geom_col(width = .8) +
     geom_text(aes(label = country_code, y = y, color = country_code), size = 5,
@@ -144,17 +144,17 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w 
 
   # make the pyramid plot
 
-  glowbe_counts <- df %>%
-    dplyr::filter(country_code != "XX") %>%
-    droplevels() %>%
-    group_by(country_code, variant) %>%
+  glowbe_counts <- df |>
+    dplyr::filter(country_code != "XX") |>
+    droplevels() |>
+    group_by(country_code, variant) |>
     mutate(
       country_code = factor(
         country_code,
         levels = varieties)
-    ) %>%
-    count() %>%
-    ungroup() %>%
+    ) |>
+    count() |>
+    ungroup() |>
     mutate(
       words_mil = rep(
         c(386.8, 134.8, 387.6, 101, 148.2, 81.4, 96.4, 46.6, 51.4,
@@ -163,8 +163,8 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w 
       per_mil = n/words_mil
     )
 
-  p_left <- glowbe_counts %>%
-    dplyr::filter(variant == "ed") %>%
+  p_left <- glowbe_counts |>
+    dplyr::filter(variant == "ed") |>
     ggplot(aes(country_code, per_mil)) +
     geom_col(fill = glowbe_dark, width = .6) +
     geom_text(aes(label = n), hjust = 1.2, color = glowbe_dark, fontface = "bold", size = 3) +
@@ -173,8 +173,8 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w 
     scale_y_reverse(limits = c(6.5,0)) +
     ggcharts:::pyramid_theme("left")
 
-  p_right <- glowbe_counts %>%
-    dplyr::filter(variant == "ing") %>%
+  p_right <- glowbe_counts |>
+    dplyr::filter(variant == "ing") |>
     ggplot(aes(country_code, per_mil)) +
     geom_col(fill = glowbe_dark, width = .6) +
     geom_text(aes(label = n), hjust = -.2, color = glowbe_dark, fontface = "bold", size = 3) +
@@ -234,7 +234,7 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "light", "bw"), w 
         )
   }
 
-  here("figures", file) %>%
+  here("figures", file) |>
     ggsave(p_combined, device = device, height = h, width = w)
 
   return(here("figures", file))
@@ -247,36 +247,36 @@ PlotBars <- function(data, file, bar_colors = c("#FEC260", "cornflowerblue"),
   require(dplyr)
   require(ggplot2)
 
-  data <- data %>%
-    dplyr::filter(postmodifier_vp == "y") %>%
+  data <- data |>
+    dplyr::filter(postmodifier_vp == "y") |>
     mutate(variant = as.factor(variant),
            variant = relevel(variant, ref = "ed"),
-           dist_to_post_vp = as.integer(dist_to_post_vp) %>%
+           dist_to_post_vp = as.integer(dist_to_post_vp) |>
              as.factor())
 
-  x_levs <- data %>%
-    pull(dist_to_post_vp) %>%
+  x_levs <- data |>
+    pull(dist_to_post_vp) |>
     levels()
 
   n_x_levs <- length(x_levs)
 
-  fill_levs <- data %>%
-    pull(variant) %>%
-    as.factor() %>%
+  fill_levs <- data |>
+    pull(variant) |>
+    as.factor() |>
     levels()
 
-  counts <- data %>%
-    group_by(dist_to_post_vp, variant) %>%
-    count() %>%
+  counts <- data |>
+    group_by(dist_to_post_vp, variant) |>
+    count() |>
     mutate(
       place = ifelse(variant == fill_levs[1], .98, .02),
       color = ifelse(variant == fill_levs[1], "a", "b"))
 
-  x_nlevs <- data %>%
-    pull(dist_to_post_vp) %>%
+  x_nlevs <- data |>
+    pull(dist_to_post_vp) |>
     nlevels()
 
-  p <- data %>%
+  p <- data |>
     ggplot(aes(x = dist_to_post_vp, fill = variant)) +
     geom_bar(position = "fill", color = "#000000", width = .8) +
     geom_text(
@@ -300,7 +300,7 @@ PlotBars <- function(data, file, bar_colors = c("#FEC260", "cornflowerblue"),
     ) +
     lemon::coord_capped_flip(bottom = 'both', gap = 0)
 
-  here("figures", file) %>%
+  here("figures", file) |>
     ggsave(p, device = device, height = h, width = w)
   return(here("figures", file))
 }
@@ -558,10 +558,10 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
 PlotPartialEffects <- function(mod, file,  w = 4.8, h = 3.2, dev = c("png", "pdf", "wmf"), dpi = 320){
   require(effects)
 
-  p <- effects::Effect(c("dist_to_post_vp", "verb"), mod) %>%
-    as_tibble() %>%
-    mutate(dist_to_post_vp = as.numeric(dist_to_post_vp) %>%
-             round() %>% as.factor()) %>%
+  p <- effects::Effect(c("dist_to_post_vp", "verb"), mod) |>
+    as_tibble() |>
+    mutate(dist_to_post_vp = as.numeric(dist_to_post_vp) |>
+             round() |> as.factor()) |>
     ggplot(aes(x = dist_to_post_vp, y = fit, color = verb)) +
     geom_errorbar(aes(ymin = lower, ymax = upper), width = .1) +
     geom_point(size = 4) +
@@ -581,7 +581,7 @@ PlotPartialEffects <- function(mod, file,  w = 4.8, h = 3.2, dev = c("png", "pdf
     )
 
   device <- match.arg(dev)
-  here("figures", file) %>%
+  here("figures", file) |>
     ggsave(p, device = device, height = h, width = w)
 
   return(here("figures", file))
