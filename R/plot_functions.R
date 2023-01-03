@@ -59,10 +59,12 @@ theme_dark <- function (text_col = "white", bg_col = "black") {
 
 # Plot for glowbe frequencies
 PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w = 10,
-                                  h = 6.8, dev = c("png", "pdf", "wmf"), dpi = 320){
-  require(tidyverse)
-  require(patchwork)
-  require(ggcharts)
+                                  h = 6.8, dev = c("png", "pdf", "wmf"), dpi = 320,
+                                  font = c("sans", "serif")){
+  require(tidyverse);
+  require(patchwork);
+  require(ggtext);
+  require(ggcharts);
   require(lemon)
 
   varieties <- c("US", "CA", "GB", "IE", "AU", "NZ", "IN", "LK", "PK", "BD",
@@ -83,7 +85,7 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
     names(glowbe_text) <- varieties
     glowbe_dark["GB"] <- "#9ad2fc"
     glowbe_text["GB"] <- "#9ad2fc"
-  } else if (theme == "light") {
+  } else if (theme == "blue") {
     text_col <- "black"
     bg_col <- "white"
     glowbe_dark <- rep("grey70", 20)
@@ -102,7 +104,10 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
     glowbe_dark["GB"] <- "black"
     glowbe_text["GB"] <- "black"
   }
-
+  
+  # get the font family
+  fontfam <- match.arg(font)
+  
   p_perc <- df |>
     group_by(country_code, variant) |>
     count() |>
@@ -133,8 +138,10 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
 
   p_perc <- p_perc +
     theme(
+      plot.title = element_markdown(family = fontfam),
       panel.grid.major.x = element_blank(),
       axis.line.y = element_line(color = text_col),
+      axis.text.y = element_text(family = fontfam),
       axis.line.x = element_blank(),
       axis.text.x = element_blank(),
       axis.ticks.y = element_line(color = text_col),
@@ -192,9 +199,9 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
   }
 
   p_left <- p_left +
-    theme(plot.title = ggtext::element_markdown(hjust = .9, color = text_col),
+    theme(plot.title = ggtext::element_markdown(hjust = .9, color = text_col, family = fontfam),
           axis.line.x = element_line(color = text_col),
-          axis.text.x = element_text(color = text_col),
+          axis.text.x = element_text(color = text_col, family = fontfam),
           axis.ticks.x = element_line(color = text_col),
           axis.text.y = element_blank(),
           axis.ticks.y = element_blank(),
@@ -202,9 +209,9 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
     lemon::coord_capped_flip(bottom = "right", gap = 0)
 
   p_right <- p_right +
-    theme(plot.title = ggtext::element_markdown(hjust = .1, color = text_col),
+    theme(plot.title = ggtext::element_markdown(hjust = .1, color = text_col, family = fontfam),
           axis.line.x = element_line(color = text_col),
-          axis.text.x = element_text(color = text_col),
+          axis.text.x = element_text(color = text_col, family = fontfam),
           axis.ticks.x = element_line(color = text_col),
           axis.text.y = element_text(size = rel(.9), color = text_col),
           axis.ticks.y = element_blank(),
@@ -220,19 +227,6 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
     )
 
   device <- match.arg(dev)
-
-  if(device == "pdf"){
-    p_combined <- p_combined +
-      theme(
-        text = element_text(family = "serif"),
-        axis.text.x = element_text(family = "serif"),
-        axis.text.y = element_text(family = "serif"),
-        axis.title = element_text(family = "serif"),
-        plot.title = element_text(family = "serif"),
-        strip.text = element_text(family = "serif"),
-        plot.caption = element_text(family = "serif")
-        )
-  }
 
   here("figures", file) |>
     ggsave(p_combined, device = device, height = h, width = w)
@@ -408,7 +402,8 @@ PlotTwitterMap <- function(data, map, file, verb = c("sit", "stand"),
 }
 
 PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
-                           theme = c("dark", "blue", "bw")) {
+                           theme = c("dark", "blue", "bw"),
+                           font = c("sans", "serif")) {
   # updated version using {sf} and {ggplot2} 
   require(ggplot2)
   require(patchwork);
@@ -477,7 +472,7 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
   colors <- findColours(class, colpal)
   
   # Map
-  # png(here::here("figures", file), width = 1800, height = 2800, res = 300)
+  fam <- match.arg(font)
   if(v == "sit"){
     p_main <- ggplot(map) +
       geom_sf(aes(fill = SAT_PERC), linewidth = .04, color = legendcol)
@@ -500,11 +495,12 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
     labs(caption = "UK Twitter 2014") +
     theme_void() +
     theme(
-      legend.title = element_text(vjust = 1.5, color = legendcol, hjust = .5),
+      legend.title = element_text(vjust = 1.5, color = legendcol, hjust = .5,
+                                  family = fam),
       legend.text = element_text(color = legendcol),
       legend.position = c(.9, .7),
       plot.background = element_rect(fill = bgcol, color = NA),
-      plot.caption = element_text(color = legendcol, size = 10),
+      plot.caption = element_text(color = legendcol, size = 10, family = fam),
       # plot.caption.position = c(.99, .01)
       ) +
     annotate(geom = "text", x = -1.898575, y = 52.489471, label = "Birmingham", size = 2, color = "white") +
@@ -542,7 +538,8 @@ PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
     ) +
     labs(caption = "London") +
     theme_void() + guides(fill = "none") +
-    theme(plot.caption = element_text(size = 10, hjust = 0, color = legendcol),
+    theme(plot.caption = element_text(size = 10, hjust = 0, color = legendcol,
+                                      family = fam),
           panel.border = element_rect(fill = NA, color = legendcol))
   
   p <- p_main + inset_element(p_london, left = 0.01, bottom = 0.1, right = .31, top = .45)
