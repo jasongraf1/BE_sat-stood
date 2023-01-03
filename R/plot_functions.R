@@ -201,7 +201,7 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
   p_left <- p_left +
     theme(plot.title = ggtext::element_markdown(hjust = .9, color = text_col, family = fontfam),
           axis.line.x = element_line(color = text_col),
-          axis.text.x = element_text(color = text_col, family = fontfam),
+          axis.text.x = element_text(color = text_col, family = fontfam, size = 14),
           axis.ticks.x = element_line(color = text_col),
           axis.text.y = element_blank(),
           axis.ticks.y = element_blank(),
@@ -211,9 +211,9 @@ PlotGlowbeFrequencies <- function(df, file, theme = c("dark", "blue", "bw"), w =
   p_right <- p_right +
     theme(plot.title = ggtext::element_markdown(hjust = .1, color = text_col, family = fontfam),
           axis.line.x = element_line(color = text_col),
-          axis.text.x = element_text(color = text_col, family = fontfam),
+          axis.text.x = element_text(color = text_col, family = fontfam, size = 14),
           axis.ticks.x = element_line(color = text_col),
-          axis.text.y = element_text(size = rel(.9), color = text_col),
+          axis.text.y = element_text(size = rel(.9), color = text_col, hjust = 0),
           axis.ticks.y = element_blank(),
           axis.line.y = element_blank()) +
     lemon::coord_capped_flip(bottom = "left", gap = 0)
