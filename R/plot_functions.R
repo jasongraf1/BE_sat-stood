@@ -308,8 +308,13 @@ PlotBars <- function(data, file, bar_colors = c("#FEC260", "cornflowerblue"),
 
 PlotTwitterMap <- function(data, map, file, verb = c("sit", "stand"),
                            theme = c("dark", "blue", "bw")) {
-
-  require(sp); require(rgdal); require(classInt); require(plotrix); require(Hmisc)
+  # earlier version 
+  # {rgdal} is being retired in 2023, so migrate to PlotTwitterMap2()
+  require(sp); 
+  require(rgdal); 
+  require(classInt); 
+  require(plotrix); 
+  require(Hmisc)
 
   projection <- "+proj=longlat +datum=WGS84"
   map <- spTransform(map, CRS(projection))
@@ -401,6 +406,154 @@ PlotTwitterMap <- function(data, map, file, verb = c("sit", "stand"),
 
   return(here::here("figures", file))
 }
+
+PlotTwitterMap2 <- function(data, map, file, verb = c("sit", "stand"),
+                           theme = c("dark", "blue", "bw")) {
+  # updated version using {sf} and {ggplot2} 
+  require(ggplot2)
+  require(patchwork);
+  require(sf); 
+  require(mapsf); 
+  require(classInt); 
+  require(plotrix); 
+  require(Hmisc)
+  
+  data <- data |> 
+    rename(name = "REGION") |> 
+    mutate(
+      SAT_PERC = 100*(SAT/(SAT + SITTING)),
+      STOOD_PERC = 100*(STOOD/(STOOD + STANDING))
+    )
+  
+  # add data to map df
+  map <- map |> 
+    left_join(
+      data, by = "name"
+    )
+  
+  # match the verb and theme elements
+  v <- match.arg(verb)
+  color <- match.arg(theme)
+  if (color == "blue"){
+    # blue and yellow theme
+    red <- "#F5D042"
+    blue <- "#2131FE"
+    textcol <- "white"
+    bgcol = "white"
+    legendcol = "black"
+  } else if (color == "dark") {
+    red <- "#E6401A"
+    blue <- "#1A2666"
+    textcol <- "white"
+    bgcol = "black"
+    legendcol = "white"
+  } else if (color == "bw") {
+    red <- "grey10"
+    blue <- "grey90"
+    textcol <- "white"
+    bgcol = "white"
+    legendcol = "black"
+  }
+  
+  breaks <- 10
+  colfunc <- colorRampPalette(c(blue, red), bias = 1)
+  colpal <- colfunc(breaks)
+  # pull out the percentages to color by
+  if(v == "sit"){
+    label <- "BE sat/sitting"
+    class <- classIntervals(data$SAT_PERC, breaks, style = "quantile", intervalClosure = "right")
+    color_breaks <- quantile(data$SAT_PERC, seq(.1, .9, .1)) |> 
+      as.vector()
+    data_range <- range(data$SAT_PERC)
+    data_median <- median(data$SAT_PERC)
+  } else if(v == "stand"){
+    label <- "BE stood/standing"
+    class <- classIntervals(data$STOOD_PERC, breaks, style = "quantile", intervalClosure = "right")
+    color_breaks <- quantile(data$STOOD_PERC, seq(.1, .9, .1)) |> 
+      as.vector()
+    data_range <- range(data$STOOD_PERC)
+    data_median <- median(data$STOOD_PERC)
+  }
+  colors <- findColours(class, colpal)
+  
+  # Map
+  # png(here::here("figures", file), width = 1800, height = 2800, res = 300)
+  if(v == "sit"){
+    p_main <- ggplot(map) +
+      geom_sf(aes(fill = SAT_PERC), linewidth = .04, color = legendcol)
+  } else {
+    p_main <- ggplot(map) +
+      geom_sf(aes(fill = STOOD_PERC), linewidth = .04, color = legendcol)
+  }
+  p_main <- p_main +
+    ylim(50.1, 59.4) +
+    scale_fill_gradientn(
+      limits = data_range,
+      colors = colpal[c(1, seq_along(colpal), length(colpal))],
+      values = c(0, scales::rescale(color_breaks, from = data_range), 1),
+      breaks = c(data_range[1], mean(data_range), data_range[2]),
+      labels = c(round(min(data_range[1]), 1), round(data_median), round(data_range[2], 1)),
+      name = label
+    ) + 
+    geom_rect(aes(xmin = -.48, xmax = .238, ymin = 51.3, ymax = 51.71), 
+              linewidth = .25, color = "white", fill = NA) +
+    labs(caption = "UK Twitter 2014") +
+    theme_void() +
+    theme(
+      legend.title = element_text(vjust = 1.5, color = legendcol, hjust = .5),
+      legend.text = element_text(color = legendcol),
+      legend.position = c(.9, .7),
+      plot.background = element_rect(fill = bgcol, color = NA),
+      plot.caption = element_text(color = legendcol, size = 10),
+      # plot.caption.position = c(.99, .01)
+      ) +
+    annotate(geom = "text", x = -1.898575, y = 52.489471, label = "Birmingham", size = 2, color = "white") +
+    annotate(geom = "text", x = -2.244644, y = 53.483959 + .01, label = "Manchester", size = 2, color = "white") +
+    annotate(geom = "text", x = -1.548567, y = 53.801277, label = "Leeds", size = 2, color = "white") +
+    annotate(geom = "text", x = -2.59665 + .06, y = 51.45523 - .003, label = "Bristol", size = 2, color = "white") +
+    annotate(geom = "text", x = -4.251433, y = 55.860916, label = "Glasgow", size = 2, col = "white") +
+    annotate(geom = "text", x = -3.179090 - .21, y = 51.481583 + .01 - .003, label = "Cardiff", size = 2, color = "white") +
+    annotate(geom = "text", x = -1.466667, y = 53.383331, label = "Sheffield", size = 2, color = "white") +
+    annotate(geom = "text", x = -1.150000, y = 52.950001, label = "Nottingham", size = 2, color = "white") +
+    annotate(geom = "text", x = -5.926437 - .14, y = 54.607868 - .04, label = "Belfast", size = 2, col = "white") +
+    annotate(geom = "text", x = -3.188267 + .006, y = 55.953251 - .06, label = "Edinburgh", size = 2, col = "white") +
+    annotate(geom = "text", x = -2.983333 + .2, y = 53.400002 - .015, label = "Liverpool", size = 2, color = "white") +
+    annotate(geom = "text", x = -1.600000 - .18, y = 54.966667 - .003, label = "Newcastle", size = 2, color = "white") +
+    annotate(geom = "text", x = 1.297355, y = 52.630886, label = "Norwich", size = 2, color = "white") +
+    annotate(geom = "text", x = -1.133333, y = 52.633331, label = "Leicester", size = 2, color = "white") +
+    annotate(geom = "text", x = -1.404351, y = 50.909698, label = "Southampton", size = 2, color = "white") 
+  # London inset
+  if(v == "sit"){
+    p_london <- ggplot(map) +
+      geom_sf(aes(fill = SAT_PERC), linewidth = .05, color = legendcol)
+  } else {
+    p_london <- ggplot(map) +
+      geom_sf(aes(fill = STOOD_PERC), linewidth = .05, color = legendcol)
+  }
+  p_london <- p_london +
+    xlim(-.48, .238) +
+    ylim(51.3, 51.71) +
+    scale_fill_gradientn(
+      limits = data_range,
+      colors = colpal[c(1, seq_along(colpal), length(colpal))],
+      values = c(0, scales::rescale(color_breaks, from = data_range), 1),
+      breaks = c(data_range[1], 50, data_range[2]),
+      labels = c(round(min(data_range[1]), 1), round(data_median), round(data_range[2], 1))
+    ) +
+    labs(caption = "London") +
+    theme_void() + guides(fill = "none") +
+    theme(plot.caption = element_text(size = 10, hjust = 0, color = legendcol),
+          panel.border = element_rect(fill = NA, color = legendcol))
+  
+  p <- p_main + inset_element(p_london, left = 0.01, bottom = 0.1, right = .31, top = .45)
+  
+  # dev.off()
+  ggsave(here::here("figures", file), plot = p, device = "png", width = 1800, 
+         height = 2800, units = "px", dpi = 300)
+  
+  return(here::here("figures", file))
+}
+
 
 PlotPartialEffects <- function(mod, file,  w = 4.8, h = 3.2, dev = c("png", "pdf", "wmf"), dpi = 320){
   require(effects)
