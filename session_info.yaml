@@ -7,7 +7,7 @@ platform:
   collate: English_United Kingdom.utf8
   ctype: English_United Kingdom.utf8
   tz: Europe/London
-  date: '2023-01-02'
+  date: '2023-01-04'
   rstudio: 2022.12.0+353 Elsbeth Geranium (desktop)
   pandoc: NA
 packages:
@@ -17,6 +17,8 @@ packages:
   - backports
   - base64enc
   - base64url
+  - bit
+  - bit64
   - boot
   - broom
   - cachem
@@ -30,6 +32,7 @@ packages:
   - cluster
   - codetools
   - colorspace
+  - commonmark
   - crayon
   - credentials
   - data.table
@@ -89,6 +92,7 @@ packages:
   - lubridate
   - magrittr
   - mapsf
+  - markdown
   - MASS
   - Matrix
   - memoise
@@ -124,11 +128,12 @@ packages:
   - readr
   - readxl
   - remotes
+  - repr
   - reprex
-  - rgdal
   - rlang
   - rpart
   - rprojroot
+  - rsconnect
   - rstudioapi
   - Rttf2pt1
   - rvest
@@ -136,7 +141,7 @@ packages:
   - sessioninfo
   - sf
   - shiny
-  - sp
+  - skimr
   - stringi
   - stringr
   - survey
@@ -156,6 +161,7 @@ packages:
   - usethis
   - utf8
   - vctrs
+  - vroom
   - withr
   - xfun
   - xml2
@@ -167,8 +173,10 @@ packages:
   - 1.4.1
   - 0.1.3
   - '1.4'
-  - 1.3.28
-  - 1.0.1
+  - 4.0.5
+  - 4.0.5
+  - 1.3.28.1
+  - 1.0.2
   - 1.0.6
   - 3.7.3
   - 3.0.5
@@ -176,10 +184,11 @@ packages:
   - 2.1.0
   - 7.3.20
   - 0.4.8
-  - 3.4.1
+  - 3.5.0
   - 2.1.4
   - 0.2.18
   - 2.0.3
+  - 1.8.1
   - 1.5.2
   - 1.3.2
   - 1.14.6
@@ -187,7 +196,7 @@ packages:
   - 2.2.1
   - 1.0.6
   - 2.4.5
-  - 0.6.30
+  - 0.6.31
   - 1.0.10
   - 1.7.12
   - 4.2.2
@@ -198,7 +207,7 @@ packages:
   - 2.1.1
   - 1.1.0
   - 0.5.2
-  - 0.8.83
+  - 0.8.84
   - 1.2.4
   - 1.5.2
   - 1.2.1
@@ -218,27 +227,28 @@ packages:
   - 4.7.2
   - 1.1.2
   - 2.4.1
-  - 0.5.3
-  - 1.5.4
-  - 1.6.6
+  - 0.5.4
+  - 1.6.0
+  - 1.6.7
   - 1.4.4
   - 1.3.5
-  - 0.18.7
+  - 0.18.8
   - 1.1.3
-  - 0.1.9
-  - 1.8.3
+  - 0.1.10
+  - 1.8.4
   - 2.23.20
   - '1.41'
   - 0.4.2
   - 1.3.0
   - 0.20.45
   - 0.6.30
-  - 0.4.5
+  - 0.4.6
   - 1.0.3
   - 1.1.31
   - 1.9.0
   - 2.0.3
   - 0.6.1
+  - '1.4'
   - 7.3.58.1
   - 1.5.3
   - 2.0.1
@@ -248,25 +258,25 @@ packages:
   - '2.4'
   - 0.1.10
   - 0.5.0
-  - 3.1.160
+  - 3.1.161
   - 2.0.3
   - 7.3.18
-  - 2.0.4
+  - 2.0.5
   - 1.1.2
   - 1.8.1
-  - 1.3.1
+  - 1.4.0
   - 2.0.3
   - 1.3.2
   - 3.8.2
   - 1.8.8
-  - 0.1.7
+  - 0.1.8
   - 1.1.1
   - 3.8.0
   - 0.3.7
   - 1.2.0.1
   - 0.4.27
   - 1.7.2
-  - 0.3.5
+  - 1.0.0
   - 2.5.1
   - 1.2.4
   - 1.1.3
@@ -274,26 +284,27 @@ packages:
   - 2.1.3
   - 1.4.1
   - 2.4.2
+  - 1.1.4
   - 2.0.2
-  - 1.6.2
   - 1.0.6
   - 4.1.19
   - 2.0.3
+  - 0.8.28
   - '0.14'
   - 1.3.11
   - 1.0.3
   - 1.2.1
   - 1.2.2
   - 1.0.9
-  - 1.7.3
-  - 1.5.1
+  - 1.7.4
+  - 2.1.5
   - 1.7.8
-  - 1.4.1
+  - 1.5.0
   - 4.1.1
   - 3.4.0
   - 3.4.1
   - 1.0.4
-  - 0.14.0
+  - 0.14.1
   - 0.3.6
   - 3.1.8
   - 1.2.1
@@ -301,13 +312,14 @@ packages:
   - 1.3.2
   - 0.1.1
   - 0.3.0
-  - 0.8.0
+  - 0.8.1
   - 1.0.1
   - 2.1.6
   - 1.2.2
   - 0.5.1
+  - 1.6.0
   - 2.5.0
-  - '0.35'
+  - '0.36'
   - 1.3.3
   - 1.8.4
   - 2.3.6
@@ -317,8 +329,10 @@ packages:
   - 1.4.1
   - 0.1-3
   - '1.4'
-  - 1.3-28
-  - 1.0.1
+  - 4.0.5
+  - 4.0.5
+  - 1.3-28.1
+  - 1.0.2
   - 1.0.6
   - 3.7.3
   - 3.0-5
@@ -326,10 +340,11 @@ packages:
   - 2.1.0
   - 7.3-20
   - 0.4-8
-  - 3.4.1
+  - 3.5.0
   - 2.1.4
   - 0.2-18
   - 2.0-3
+  - 1.8.1
   - 1.5.2
   - 1.3.2
   - 1.14.6
@@ -337,7 +352,7 @@ packages:
   - 2.2.1
   - 1.0-6
   - 2.4.5
-  - 0.6.30
+  - 0.6.31
   - 1.0.10
   - 1.7-12
   - 4.2-2
@@ -348,7 +363,7 @@ packages:
   - 2.1.1
   - 1.1.0
   - 0.5.2
-  - 0.8-83
+  - 0.8-84
   - 1.2-4
   - 1.5.2
   - 1.2.1
@@ -368,27 +383,28 @@ packages:
   - 4.7-2
   - 1.1.2
   - 2.4.1
-  - 0.5.3
-  - 1.5.4
-  - 1.6.6
+  - 0.5.4
+  - 1.6.0
+  - 1.6.7
   - 1.4.4
   - 1.3.5
-  - 0.18.7
+  - 0.18.8
   - 1.1-3
-  - 0.1-9
-  - 1.8.3
+  - 0.1-10
+  - 1.8.4
   - 2.23-20
   - '1.41'
   - 0.4.2
   - 1.3.0
   - 0.20-45
   - 0.6-30
-  - 0.4.5
+  - 0.4.6
   - 1.0.3
   - 1.1-31
   - 1.9.0
   - 2.0.3
   - 0.6.1
+  - '1.4'
   - 7.3-58.1
   - 1.5-3
   - 2.0.1
@@ -398,25 +414,25 @@ packages:
   - '2.4'
   - 0.1.10
   - 0.5.0
-  - 3.1-160
+  - 3.1-161
   - 2.0.3
   - 7.3-18
-  - 2.0.4
+  - 2.0.5
   - 1.1.2
   - 1.8.1
-  - 1.3.1
+  - 1.4.0
   - 2.0.3
   - 1.3.2
   - 3.8-2
   - 1.8.8
-  - 0.1-7
+  - 0.1-8
   - 1.1.1
   - 3.8.0
   - 0.3.7
   - 1.2.0.1
   - 0.4-27
   - 1.7.2
-  - 0.3.5
+  - 1.0.0
   - 2.5.1
   - 1.2.4
   - 1.1-3
@@ -424,26 +440,27 @@ packages:
   - 2.1.3
   - 1.4.1
   - 2.4.2
+  - 1.1.4
   - 2.0.2
-  - 1.6-2
   - 1.0.6
   - 4.1.19
   - 2.0.3
+  - 0.8.28
   - '0.14'
   - 1.3.11
   - 1.0.3
   - 1.2.1
   - 1.2.2
   - 1.0-9
-  - 1.7.3
-  - 1.5-1
+  - 1.7.4
+  - 2.1.5
   - 1.7.8
-  - 1.4.1
+  - 1.5.0
   - 4.1-1
   - 3.4-0
   - 3.4.1
   - 1.0.4
-  - 0.14.0
+  - 0.14.1
   - 0.3.6
   - 3.1.8
   - 1.2.1
@@ -451,13 +468,14 @@ packages:
   - 1.3.2
   - 0.1.1
   - 0.3.0
-  - 0.8-0
+  - 0.8-1
   - 1.0.1
   - 2.1.6
   - 1.2.2
   - 0.5.1
+  - 1.6.0
   - 2.5.0
-  - '0.35'
+  - '0.36'
   - 1.3.3
   - 1.8-4
   - 2.3.6
@@ -467,7 +485,9 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/backports
   - C:/Users/grafmilj/Documents/R-4.0/libraries/base64enc
   - C:/Users/grafmilj/Documents/R-4.0/libraries/base64url
-  - C:/Program Files/R/R-4.2.2/library/boot
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/bit
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/bit64
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/boot
   - C:/Users/grafmilj/Documents/R-4.0/libraries/broom
   - C:/Users/grafmilj/Documents/R-4.0/libraries/cachem
   - C:/Users/grafmilj/Documents/R-4.0/libraries/callr
@@ -480,6 +500,7 @@ packages:
   - C:/Program Files/R/R-4.2.2/library/cluster
   - C:/Program Files/R/R-4.2.2/library/codetools
   - C:/Users/grafmilj/Documents/R-4.0/libraries/colorspace
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/commonmark
   - C:/Users/grafmilj/Documents/R-4.0/libraries/crayon
   - C:/Users/grafmilj/Documents/R-4.0/libraries/credentials
   - C:/Users/grafmilj/Documents/R-4.0/libraries/data.table
@@ -498,7 +519,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/farver
   - C:/Users/grafmilj/Documents/R-4.0/libraries/fastmap
   - C:/Users/grafmilj/Documents/R-4.0/libraries/forcats
-  - C:/Program Files/R/R-4.2.2/library/foreign
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/foreign
   - C:/Users/grafmilj/Documents/R-4.0/libraries/Formula
   - C:/Users/grafmilj/Documents/R-4.0/libraries/fs
   - C:/Users/grafmilj/Documents/R-4.0/libraries/gargle
@@ -539,6 +560,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/lubridate
   - C:/Users/grafmilj/Documents/R-4.0/libraries/magrittr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/mapsf
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/markdown
   - C:/Users/grafmilj/Documents/R-4.0/libraries/MASS
   - C:/Users/grafmilj/Documents/R-4.0/libraries/Matrix
   - C:/Users/grafmilj/Documents/R-4.0/libraries/memoise
@@ -574,11 +596,12 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/readr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/readxl
   - C:/Users/grafmilj/Documents/R-4.0/libraries/remotes
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/repr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/reprex
-  - C:/Users/grafmilj/Documents/R-4.0/libraries/rgdal
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rlang
   - C:/Program Files/R/R-4.2.2/library/rpart
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/rsconnect
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi
   - C:/Users/grafmilj/Documents/R-4.0/libraries/Rttf2pt1
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rvest
@@ -586,7 +609,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/sessioninfo
   - C:/Users/grafmilj/Documents/R-4.0/libraries/sf
   - C:/Users/grafmilj/Documents/R-4.0/libraries/shiny
-  - C:/Users/grafmilj/Documents/R-4.0/libraries/sp
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/skimr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/stringi
   - C:/Users/grafmilj/Documents/R-4.0/libraries/stringr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/survey
@@ -606,6 +629,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/usethis
   - C:/Users/grafmilj/Documents/R-4.0/libraries/utf8
   - C:/Users/grafmilj/Documents/R-4.0/libraries/vctrs
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/vroom
   - C:/Users/grafmilj/Documents/R-4.0/libraries/withr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/xfun
   - C:/Users/grafmilj/Documents/R-4.0/libraries/xml2
@@ -617,7 +641,9 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/backports
   - C:/Users/grafmilj/Documents/R-4.0/libraries/base64enc
   - C:/Users/grafmilj/Documents/R-4.0/libraries/base64url
-  - C:/Program Files/R/R-4.2.2/library/boot
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/bit
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/bit64
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/boot
   - C:/Users/grafmilj/Documents/R-4.0/libraries/broom
   - C:/Users/grafmilj/Documents/R-4.0/libraries/cachem
   - C:/Users/grafmilj/Documents/R-4.0/libraries/callr
@@ -630,6 +656,7 @@ packages:
   - C:/Program Files/R/R-4.2.2/library/cluster
   - C:/Program Files/R/R-4.2.2/library/codetools
   - C:/Users/grafmilj/Documents/R-4.0/libraries/colorspace
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/commonmark
   - C:/Users/grafmilj/Documents/R-4.0/libraries/crayon
   - C:/Users/grafmilj/Documents/R-4.0/libraries/credentials
   - C:/Users/grafmilj/Documents/R-4.0/libraries/data.table
@@ -648,7 +675,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/farver
   - C:/Users/grafmilj/Documents/R-4.0/libraries/fastmap
   - C:/Users/grafmilj/Documents/R-4.0/libraries/forcats
-  - C:/Program Files/R/R-4.2.2/library/foreign
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/foreign
   - C:/Users/grafmilj/Documents/R-4.0/libraries/Formula
   - C:/Users/grafmilj/Documents/R-4.0/libraries/fs
   - C:/Users/grafmilj/Documents/R-4.0/libraries/gargle
@@ -689,6 +716,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/lubridate
   - C:/Users/grafmilj/Documents/R-4.0/libraries/magrittr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/mapsf
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/markdown
   - C:/Users/grafmilj/Documents/R-4.0/libraries/MASS
   - C:/Users/grafmilj/Documents/R-4.0/libraries/Matrix
   - C:/Users/grafmilj/Documents/R-4.0/libraries/memoise
@@ -724,11 +752,12 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/readr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/readxl
   - C:/Users/grafmilj/Documents/R-4.0/libraries/remotes
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/repr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/reprex
-  - C:/Users/grafmilj/Documents/R-4.0/libraries/rgdal
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rlang
   - C:/Program Files/R/R-4.2.2/library/rpart
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/rsconnect
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi
   - C:/Users/grafmilj/Documents/R-4.0/libraries/Rttf2pt1
   - C:/Users/grafmilj/Documents/R-4.0/libraries/rvest
@@ -736,7 +765,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/sessioninfo
   - C:/Users/grafmilj/Documents/R-4.0/libraries/sf
   - C:/Users/grafmilj/Documents/R-4.0/libraries/shiny
-  - C:/Users/grafmilj/Documents/R-4.0/libraries/sp
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/skimr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/stringi
   - C:/Users/grafmilj/Documents/R-4.0/libraries/stringr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/survey
@@ -756,6 +785,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/usethis
   - C:/Users/grafmilj/Documents/R-4.0/libraries/utf8
   - C:/Users/grafmilj/Documents/R-4.0/libraries/vctrs
+  - C:/Users/grafmilj/Documents/R-4.0/libraries/vroom
   - C:/Users/grafmilj/Documents/R-4.0/libraries/withr
   - C:/Users/grafmilj/Documents/R-4.0/libraries/xfun
   - C:/Users/grafmilj/Documents/R-4.0/libraries/xml2
@@ -775,67 +805,6 @@ packages:
   - no
   - no
   - no
-  - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - no
-  - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - no
-  - no
-  - no
-  - no
   - no
   - no
   - yes
@@ -857,7 +826,58 @@ packages:
   - no
   - no
   - no
+  - no
+  - no
+  - no
+  - no
   - yes
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - yes
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
   - no
   - no
   - no
@@ -880,6 +900,21 @@ packages:
   - no
   - no
   - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
   - no
   - no
   - no
@@ -899,6 +934,7 @@ packages:
   - yes
   - no
   - yes
+  - no
   - no
   - no
   - no
@@ -1061,14 +1097,22 @@ packages:
   - no
   - no
   - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
   date:
   - '2019-01-13'
   - '2019-03-21'
   - '2021-12-13'
   - '2015-07-28'
   - '2018-05-14'
-  - '2021-05-03'
-  - '2022-08-29'
+  - '2022-11-15'
+  - '2020-08-30'
+  - '2022-11-22'
+  - '2022-12-15'
   - '2021-08-19'
   - '2022-11-02'
   - '2022-01-06'
@@ -1076,10 +1120,11 @@ packages:
   - '2022-04-21'
   - '2022-01-16'
   - '2022-09-29'
-  - '2022-09-23'
+  - '2022-12-20'
   - '2022-08-22'
   - '2020-11-04'
   - '2022-02-21'
+  - '2022-10-14'
   - '2022-09-29'
   - '2021-11-29'
   - '2022-11-16'
@@ -1087,7 +1132,7 @@ packages:
   - '2022-06-27'
   - '2021-10-23'
   - '2022-10-11'
-  - '2022-10-18'
+  - '2022-12-11'
   - '2022-09-01'
   - '2022-10-24'
   - '2022-07-13'
@@ -1098,7 +1143,7 @@ packages:
   - '2022-07-06'
   - '2021-01-25'
   - '2022-08-19'
-  - '2022-09-28'
+  - '2022-12-06'
   - '2020-10-16'
   - '2021-12-08'
   - '2022-09-08'
@@ -1118,27 +1163,28 @@ packages:
   - '2022-11-18'
   - '2022-08-19'
   - '2022-07-07'
-  - '2022-07-18'
-  - '2021-09-08'
-  - '2022-09-08'
+  - '2022-12-07'
+  - '2022-12-15'
+  - '2022-12-14'
   - '2022-08-17'
   - '2022-09-22'
-  - '2022-11-18'
+  - '2022-11-24'
   - '2022-07-13'
-  - '2021-07-24'
-  - '2022-10-21'
+  - '2022-11-29'
+  - '2022-12-06'
   - '2021-05-03'
   - '2022-11-18'
   - '2020-10-20'
   - '2021-08-18'
   - '2021-09-22'
   - '2022-07-04'
-  - '2020-06-08'
+  - '2022-12-02'
   - '2022-10-07'
   - '2022-11-01'
   - '2022-11-06'
   - '2022-03-30'
   - '2022-12-12'
+  - '2022-11-16'
   - '2022-08-03'
   - '2022-11-11'
   - '2021-11-26'
@@ -1148,25 +1194,25 @@ packages:
   - '2019-04-26'
   - '2022-11-11'
   - '2018-06-12'
-  - '2022-10-10'
+  - '2022-12-15'
   - '2022-05-26'
   - '2022-09-28'
-  - '2022-10-17'
+  - '2022-12-06'
   - '2022-08-19'
   - '2022-08-19'
-  - '2021-12-20'
+  - '2022-11-27'
   - '2019-09-22'
   - '2022-11-16'
   - '2021-09-08'
   - '2022-11-11'
-  - '2013-12-03'
+  - '2022-11-29'
   - '2020-01-24'
   - '2022-10-26'
   - '2020-11-02'
   - '2021-02-11'
   - '2022-06-09'
   - '2022-10-26'
-  - '2022-10-06'
+  - '2022-12-20'
   - '2021-08-19'
   - '2022-10-24'
   - '2022-04-03'
@@ -1174,26 +1220,27 @@ packages:
   - '2022-10-01'
   - '2022-08-17'
   - '2021-11-30'
+  - '2022-01-04'
   - '2022-08-17'
-  - '2022-11-09'
   - '2022-09-24'
   - '2022-10-21'
   - '2022-04-02'
+  - '2022-10-24'
   - '2022-08-22'
   - '2022-10-08'
   - '2022-08-19'
   - '2022-08-20'
   - '2021-12-06'
   - '2022-11-08'
-  - '2022-10-25'
-  - '2022-11-07'
+  - '2022-12-15'
+  - '2022-12-23'
   - '2022-07-11'
-  - '2022-08-20'
+  - '2022-12-02'
   - '2021-07-19'
   - '2022-08-09'
   - '2022-10-18'
   - '2022-02-11'
-  - '2022-11-01'
+  - '2022-11-29'
   - '2021-10-13'
   - '2022-07-22'
   - '2022-09-08'
@@ -1201,13 +1248,14 @@ packages:
   - '2022-07-18'
   - '2022-11-04'
   - '2022-03-28'
-  - '2022-02-05'
+  - '2022-12-10'
   - '2021-11-30'
   - '2022-05-25'
   - '2021-07-24'
   - '2022-11-16'
+  - '2022-09-30'
   - '2022-03-03'
-  - '2022-11-16'
+  - '2022-12-21'
   - '2021-11-30'
   - '2019-04-21'
   - '2022-10-18'
@@ -1218,7 +1266,9 @@ packages:
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
@@ -1226,70 +1276,72 @@ packages:
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.0)
@@ -1304,41 +1356,16 @@ packages:
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.1)
   - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.1)
   - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.0)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.2)
-  - CRAN (R 4.2.1)
-  - CRAN (R 4.2.1)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.2)
@@ -1347,15 +1374,42 @@ packages:
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.1)
   - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
+  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.1)
+  - CRAN (R 4.2.1)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
-  - CRAN (R 4.2.0)
+  - CRAN (R 4.2.2)
   - CRAN (R 4.2.1)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
+  - CRAN (R 4.2.1)
   - CRAN (R 4.2.0)
   - CRAN (R 4.2.2)
   - CRAN (R 4.2.0)
@@ -1367,6 +1421,8 @@ packages:
   - yes
   - yes
   - yes
+  - .na
+  - yes
   - yes
   - yes
   - yes
@@ -1378,21 +1434,6 @@ packages:
   - yes
   - yes
   - .na
-  - yes
-  - yes
-  - yes
-  - yes
-  - .na
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
   - yes
   - yes
   - yes
@@ -1413,25 +1454,6 @@ packages:
   - yes
   - yes
   - yes
-  - yes
-  - yes
-  - .na
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - .na
-  - yes
-  - yes
-  - .na
-  - yes
-  - yes
-  - yes
-  - .na
   - yes
   - yes
   - yes
@@ -1459,6 +1481,26 @@ packages:
   - yes
   - yes
   - yes
+  - .na
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
   - yes
   - yes
   - yes
@@ -1477,7 +1519,6 @@ packages:
   - yes
   - yes
   - yes
-  - .na
   - yes
   - yes
   - yes
@@ -1485,17 +1526,6 @@ packages:
   - yes
   - yes
   - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - .na
-  - yes
-  - yes
-  - yes
-  - yes
-  - .na
   - yes
   - yes
   - yes
@@ -1507,7 +1537,37 @@ packages:
   - yes
   - .na
   - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
   - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
   - yes
   - yes
   - yes
@@ -1517,37 +1577,19 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Program Files/R/R-4.2.2/library
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Program Files/R/R-4.2.2/library
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Program Files/R/R-4.2.2/library
-  - C:/Program Files/R/R-4.2.2/library
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Program Files/R/R-4.2.2/library
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
@@ -1577,7 +1619,24 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Program Files/R/R-4.2.2/library
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
@@ -1585,29 +1644,7 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Program Files/R/R-4.2.2/library
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
@@ -1640,7 +1677,36 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Program Files/R/R-4.2.2/library
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Program Files/R/R-4.2.2/library
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
   - C:/Users/grafmilj/Documents/R-4.0/libraries
