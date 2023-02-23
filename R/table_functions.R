@@ -84,3 +84,21 @@ MakeHistoricalTable <- function(df){
     align(j = 3:6, align = "right", part = "all") %>%
     align(j = 1:2, align = "left", part = "all")
 }
+
+MakeBNCtable <- function(df, file, type = c("html", "latex")){
+  require(here)
+  require(flextable)
+  require(knitr)
+  require(kableExtra)
+}
+
+
+
+
+
+
+
+
+
+
+
