@@ -1,1270 +1,168 @@
 --------------------------------------------------------------------------------
 -------------------------------- R environment ---------------------------------
 --------------------------------------------------------------------------------
-<table>
- <thead>
-  <tr>
-   <th style="text-align:left;">   </th>
-   <th style="text-align:left;"> Setting </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> version </td>
-   <td style="text-align:left;"> R version 4.3.1 (2023-06-16 ucrt) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> os </td>
-   <td style="text-align:left;"> Windows 10 x64 (build 19045) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> system </td>
-   <td style="text-align:left;"> x86_64, mingw32 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> ui </td>
-   <td style="text-align:left;"> RStudio </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> language </td>
-   <td style="text-align:left;"> (EN) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> collate </td>
-   <td style="text-align:left;"> English_United Kingdom.utf8 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> ctype </td>
-   <td style="text-align:left;"> English_United Kingdom.utf8 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tz </td>
-   <td style="text-align:left;"> Europe/London </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> date </td>
-   <td style="text-align:left;"> 2023-08-08 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> rstudio </td>
-   <td style="text-align:left;"> 2023.06.0+421 Mountain Hydrangea (desktop) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> pandoc </td>
-   <td style="text-align:left;"> 3.1.4 @ C:/Users/grafmilj/AppData/Local/Pandoc/ (via rmarkdown) </td>
-  </tr>
-</tbody>
-</table>
+|         |Setting                                                   |
+|:--------|:---------------------------------------------------------|
+|version  |R version 4.3.1 (2023-06-16 ucrt)                         |
+|os       |Windows 10 x64 (build 19045)                              |
+|system   |x86_64, mingw32                                           |
+|ui       |RStudio                                                   |
+|language |(EN)                                                      |
+|collate  |English_United Kingdom.utf8                               |
+|ctype    |English_United Kingdom.utf8                               |
+|tz       |Europe/London                                             |
+|date     |2023-08-17                                                |
+|rstudio  |2023.06.0+421 Mountain Hydrangea (desktop)                |
+|pandoc   |3.1.4 @ C:\Users\grafmilj\AppData\Local\Pandoc\pandoc.exe |
 --------------------------------------------------------------------------------
 ----------------------------------- packages -----------------------------------
 --------------------------------------------------------------------------------
-<table>
- <thead>
-  <tr>
-   <th style="text-align:left;">   </th>
-   <th style="text-align:left;"> package </th>
-   <th style="text-align:left;"> ondiskversion </th>
-   <th style="text-align:left;"> loadedversion </th>
-   <th style="text-align:left;"> path </th>
-   <th style="text-align:left;"> loadedpath </th>
-   <th style="text-align:left;"> attached </th>
-   <th style="text-align:left;"> is_base </th>
-   <th style="text-align:left;"> date </th>
-   <th style="text-align:left;"> source </th>
-   <th style="text-align:left;"> md5ok </th>
-   <th style="text-align:left;"> library </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> backports </td>
-   <td style="text-align:left;"> backports </td>
-   <td style="text-align:left;"> 1.4.1 </td>
-   <td style="text-align:left;"> 1.4.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/backports </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/backports </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-12-13 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.0) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> base64url </td>
-   <td style="text-align:left;"> base64url </td>
-   <td style="text-align:left;"> 1.4 </td>
-   <td style="text-align:left;"> 1.4 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/base64url </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/base64url </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2018-05-14 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> cachem </td>
-   <td style="text-align:left;"> cachem </td>
-   <td style="text-align:left;"> 1.0.8 </td>
-   <td style="text-align:left;"> 1.0.8 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/cachem </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/cachem </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-01 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> callr </td>
-   <td style="text-align:left;"> callr </td>
-   <td style="text-align:left;"> 3.7.3 </td>
-   <td style="text-align:left;"> 3.7.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/callr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/callr </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-11-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> cli </td>
-   <td style="text-align:left;"> cli </td>
-   <td style="text-align:left;"> 3.6.1 </td>
-   <td style="text-align:left;"> 3.6.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/cli </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/cli </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-23 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> codetools </td>
-   <td style="text-align:left;"> codetools </td>
-   <td style="text-align:left;"> 0.2.19 </td>
-   <td style="text-align:left;"> 0.2-19 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/codetools </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/codetools </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-01 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.0) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> colorspace </td>
-   <td style="text-align:left;"> colorspace </td>
-   <td style="text-align:left;"> 2.1.0 </td>
-   <td style="text-align:left;"> 2.1-0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/colorspace </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/colorspace </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-23 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> crayon </td>
-   <td style="text-align:left;"> crayon </td>
-   <td style="text-align:left;"> 1.5.2 </td>
-   <td style="text-align:left;"> 1.5.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/crayon </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/crayon </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-09-29 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> data.table </td>
-   <td style="text-align:left;"> data.table </td>
-   <td style="text-align:left;"> 1.14.8 </td>
-   <td style="text-align:left;"> 1.14.8 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/data.table </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/data.table </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-17 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> devtools </td>
-   <td style="text-align:left;"> devtools </td>
-   <td style="text-align:left;"> 2.4.5 </td>
-   <td style="text-align:left;"> 2.4.5 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/devtools </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/devtools </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-10-11 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> digest </td>
-   <td style="text-align:left;"> digest </td>
-   <td style="text-align:left;"> 0.6.33 </td>
-   <td style="text-align:left;"> 0.6.33 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/digest </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/digest </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-07 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> dplyr </td>
-   <td style="text-align:left;"> dplyr </td>
-   <td style="text-align:left;"> 1.1.2 </td>
-   <td style="text-align:left;"> 1.1.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/dplyr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/dplyr </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-04-20 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> ellipsis </td>
-   <td style="text-align:left;"> ellipsis </td>
-   <td style="text-align:left;"> 0.3.2 </td>
-   <td style="text-align:left;"> 0.3.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/ellipsis </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/ellipsis </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-04-29 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> evaluate </td>
-   <td style="text-align:left;"> evaluate </td>
-   <td style="text-align:left;"> 0.21 </td>
-   <td style="text-align:left;"> 0.21 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/evaluate </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/evaluate </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-05 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> fansi </td>
-   <td style="text-align:left;"> fansi </td>
-   <td style="text-align:left;"> 1.0.4 </td>
-   <td style="text-align:left;"> 1.0.4 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/fansi </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/fansi </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-22 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> fastmap </td>
-   <td style="text-align:left;"> fastmap </td>
-   <td style="text-align:left;"> 1.1.1 </td>
-   <td style="text-align:left;"> 1.1.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/fastmap </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/fastmap </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-24 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> forcats </td>
-   <td style="text-align:left;"> forcats </td>
-   <td style="text-align:left;"> 1.0.0 </td>
-   <td style="text-align:left;"> 1.0.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/forcats </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/forcats </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-29 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> fs </td>
-   <td style="text-align:left;"> fs </td>
-   <td style="text-align:left;"> 1.6.3 </td>
-   <td style="text-align:left;"> 1.6.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/fs </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/fs </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-20 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> generics </td>
-   <td style="text-align:left;"> generics </td>
-   <td style="text-align:left;"> 0.1.3 </td>
-   <td style="text-align:left;"> 0.1.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/generics </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/generics </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-07-05 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> ggplot2 </td>
-   <td style="text-align:left;"> ggplot2 </td>
-   <td style="text-align:left;"> 3.4.2 </td>
-   <td style="text-align:left;"> 3.4.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/ggplot2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/ggplot2 </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-04-03 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> glue </td>
-   <td style="text-align:left;"> glue </td>
-   <td style="text-align:left;"> 1.6.2 </td>
-   <td style="text-align:left;"> 1.6.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/glue </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/glue </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-02-24 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> gtable </td>
-   <td style="text-align:left;"> gtable </td>
-   <td style="text-align:left;"> 0.3.3 </td>
-   <td style="text-align:left;"> 0.3.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/gtable </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/gtable </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-21 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> here </td>
-   <td style="text-align:left;"> here </td>
-   <td style="text-align:left;"> 1.0.1 </td>
-   <td style="text-align:left;"> 1.0.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/here </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/here </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2020-12-13 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> hms </td>
-   <td style="text-align:left;"> hms </td>
-   <td style="text-align:left;"> 1.1.3 </td>
-   <td style="text-align:left;"> 1.1.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/hms </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/hms </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-21 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> htmltools </td>
-   <td style="text-align:left;"> htmltools </td>
-   <td style="text-align:left;"> 0.5.5 </td>
-   <td style="text-align:left;"> 0.5.5 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/htmltools </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/htmltools </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-23 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> htmlwidgets </td>
-   <td style="text-align:left;"> htmlwidgets </td>
-   <td style="text-align:left;"> 1.6.2 </td>
-   <td style="text-align:left;"> 1.6.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/htmlwidgets </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/htmlwidgets </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-17 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> httpuv </td>
-   <td style="text-align:left;"> httpuv </td>
-   <td style="text-align:left;"> 1.6.11 </td>
-   <td style="text-align:left;"> 1.6.11 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/httpuv </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/httpuv </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-11 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> httr </td>
-   <td style="text-align:left;"> httr </td>
-   <td style="text-align:left;"> 1.4.6 </td>
-   <td style="text-align:left;"> 1.4.6 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/httr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/httr </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-08 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> igraph </td>
-   <td style="text-align:left;"> igraph </td>
-   <td style="text-align:left;"> 1.5.0.1 </td>
-   <td style="text-align:left;"> 1.5.0.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/igraph </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/igraph </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-23 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> janitor </td>
-   <td style="text-align:left;"> janitor </td>
-   <td style="text-align:left;"> 2.2.0 </td>
-   <td style="text-align:left;"> 2.2.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/janitor </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/janitor </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> kableExtra </td>
-   <td style="text-align:left;"> kableExtra </td>
-   <td style="text-align:left;"> 1.3.4 </td>
-   <td style="text-align:left;"> 1.3.4 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/kableExtra </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/kableExtra </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-02-20 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> knitr </td>
-   <td style="text-align:left;"> knitr </td>
-   <td style="text-align:left;"> 1.43 </td>
-   <td style="text-align:left;"> 1.43 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/knitr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/knitr </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-25 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> later </td>
-   <td style="text-align:left;"> later </td>
-   <td style="text-align:left;"> 1.3.1 </td>
-   <td style="text-align:left;"> 1.3.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/later </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/later </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> lifecycle </td>
-   <td style="text-align:left;"> lifecycle </td>
-   <td style="text-align:left;"> 1.0.3 </td>
-   <td style="text-align:left;"> 1.0.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/lifecycle </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/lifecycle </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-10-07 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> lubridate </td>
-   <td style="text-align:left;"> lubridate </td>
-   <td style="text-align:left;"> 1.9.2 </td>
-   <td style="text-align:left;"> 1.9.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/lubridate </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/lubridate </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-10 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> magrittr </td>
-   <td style="text-align:left;"> magrittr </td>
-   <td style="text-align:left;"> 2.0.3 </td>
-   <td style="text-align:left;"> 2.0.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/magrittr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/magrittr </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-03-30 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> memoise </td>
-   <td style="text-align:left;"> memoise </td>
-   <td style="text-align:left;"> 2.0.1 </td>
-   <td style="text-align:left;"> 2.0.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/memoise </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/memoise </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-11-26 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> mime </td>
-   <td style="text-align:left;"> mime </td>
-   <td style="text-align:left;"> 0.12 </td>
-   <td style="text-align:left;"> 0.12 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/mime </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/mime </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-09-28 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.0) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> miniUI </td>
-   <td style="text-align:left;"> miniUI </td>
-   <td style="text-align:left;"> 0.1.1.1 </td>
-   <td style="text-align:left;"> 0.1.1.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/miniUI </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/miniUI </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2018-05-18 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> munsell </td>
-   <td style="text-align:left;"> munsell </td>
-   <td style="text-align:left;"> 0.5.0 </td>
-   <td style="text-align:left;"> 0.5.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/munsell </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/munsell </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2018-06-12 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> pillar </td>
-   <td style="text-align:left;"> pillar </td>
-   <td style="text-align:left;"> 1.9.0 </td>
-   <td style="text-align:left;"> 1.9.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pillar </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pillar </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-22 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> pkgbuild </td>
-   <td style="text-align:left;"> pkgbuild </td>
-   <td style="text-align:left;"> 1.4.2 </td>
-   <td style="text-align:left;"> 1.4.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pkgbuild </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pkgbuild </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-06-26 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> pkgconfig </td>
-   <td style="text-align:left;"> pkgconfig </td>
-   <td style="text-align:left;"> 2.0.3 </td>
-   <td style="text-align:left;"> 2.0.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pkgconfig </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pkgconfig </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2019-09-22 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> pkgload </td>
-   <td style="text-align:left;"> pkgload </td>
-   <td style="text-align:left;"> 1.3.2.1 </td>
-   <td style="text-align:left;"> 1.3.2.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pkgload </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/pkgload </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-08 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> prettyunits </td>
-   <td style="text-align:left;"> prettyunits </td>
-   <td style="text-align:left;"> 1.1.1 </td>
-   <td style="text-align:left;"> 1.1.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/prettyunits </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/prettyunits </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2020-01-24 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> processx </td>
-   <td style="text-align:left;"> processx </td>
-   <td style="text-align:left;"> 3.8.2 </td>
-   <td style="text-align:left;"> 3.8.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/processx </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/processx </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-06-30 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> profvis </td>
-   <td style="text-align:left;"> profvis </td>
-   <td style="text-align:left;"> 0.3.8 </td>
-   <td style="text-align:left;"> 0.3.8 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/profvis </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/profvis </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> promises </td>
-   <td style="text-align:left;"> promises </td>
-   <td style="text-align:left;"> 1.2.0.1 </td>
-   <td style="text-align:left;"> 1.2.0.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/promises </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/promises </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-02-11 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> ps </td>
-   <td style="text-align:left;"> ps </td>
-   <td style="text-align:left;"> 1.7.5 </td>
-   <td style="text-align:left;"> 1.7.5 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/ps </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/ps </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-04-18 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> purrr </td>
-   <td style="text-align:left;"> purrr </td>
-   <td style="text-align:left;"> 1.0.1 </td>
-   <td style="text-align:left;"> 1.0.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/purrr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/purrr </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-10 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> R6 </td>
-   <td style="text-align:left;"> R6 </td>
-   <td style="text-align:left;"> 2.5.1 </td>
-   <td style="text-align:left;"> 2.5.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/R6 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/R6 </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-08-19 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Rcpp </td>
-   <td style="text-align:left;"> Rcpp </td>
-   <td style="text-align:left;"> 1.0.11 </td>
-   <td style="text-align:left;"> 1.0.11 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/Rcpp </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/Rcpp </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-06 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> readr </td>
-   <td style="text-align:left;"> readr </td>
-   <td style="text-align:left;"> 2.1.4 </td>
-   <td style="text-align:left;"> 2.1.4 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/readr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/readr </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-10 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> remotes </td>
-   <td style="text-align:left;"> remotes </td>
-   <td style="text-align:left;"> 2.4.2.1 </td>
-   <td style="text-align:left;"> 2.4.2.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/remotes </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/remotes </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-18 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> rlang </td>
-   <td style="text-align:left;"> rlang </td>
-   <td style="text-align:left;"> 1.1.1 </td>
-   <td style="text-align:left;"> 1.1.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rlang </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rlang </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-04-28 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> rmarkdown </td>
-   <td style="text-align:left;"> rmarkdown </td>
-   <td style="text-align:left;"> 2.23 </td>
-   <td style="text-align:left;"> 2.23 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rmarkdown </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rmarkdown </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-01 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> rprojroot </td>
-   <td style="text-align:left;"> rprojroot </td>
-   <td style="text-align:left;"> 2.0.3 </td>
-   <td style="text-align:left;"> 2.0.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-04-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> rstudioapi </td>
-   <td style="text-align:left;"> rstudioapi </td>
-   <td style="text-align:left;"> 0.15.0 </td>
-   <td style="text-align:left;"> 0.15.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-07 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> rvest </td>
-   <td style="text-align:left;"> rvest </td>
-   <td style="text-align:left;"> 1.0.3 </td>
-   <td style="text-align:left;"> 1.0.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rvest </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/rvest </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-08-19 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> scales </td>
-   <td style="text-align:left;"> scales </td>
-   <td style="text-align:left;"> 1.2.1 </td>
-   <td style="text-align:left;"> 1.2.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/scales </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/scales </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-08-20 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> sessioninfo </td>
-   <td style="text-align:left;"> sessioninfo </td>
-   <td style="text-align:left;"> 1.2.2 </td>
-   <td style="text-align:left;"> 1.2.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/sessioninfo </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/sessioninfo </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-12-06 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> shiny </td>
-   <td style="text-align:left;"> shiny </td>
-   <td style="text-align:left;"> 1.7.4.1 </td>
-   <td style="text-align:left;"> 1.7.4.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/shiny </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/shiny </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-06 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> snakecase </td>
-   <td style="text-align:left;"> snakecase </td>
-   <td style="text-align:left;"> 0.11.0 </td>
-   <td style="text-align:left;"> 0.11.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/snakecase </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/snakecase </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2019-05-25 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> stringi </td>
-   <td style="text-align:left;"> stringi </td>
-   <td style="text-align:left;"> 1.7.12 </td>
-   <td style="text-align:left;"> 1.7.12 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/stringi </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/stringi </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-11 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.0) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> stringr </td>
-   <td style="text-align:left;"> stringr </td>
-   <td style="text-align:left;"> 1.5.0 </td>
-   <td style="text-align:left;"> 1.5.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/stringr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/stringr </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-12-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> svglite </td>
-   <td style="text-align:left;"> svglite </td>
-   <td style="text-align:left;"> 2.1.1 </td>
-   <td style="text-align:left;"> 2.1.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/svglite </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/svglite </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-10 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> systemfonts </td>
-   <td style="text-align:left;"> systemfonts </td>
-   <td style="text-align:left;"> 1.0.4 </td>
-   <td style="text-align:left;"> 1.0.4 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/systemfonts </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/systemfonts </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-02-11 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> targets </td>
-   <td style="text-align:left;"> targets </td>
-   <td style="text-align:left;"> 1.2.0 </td>
-   <td style="text-align:left;"> 1.2.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/targets </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/targets </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-06-26 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tibble </td>
-   <td style="text-align:left;"> tibble </td>
-   <td style="text-align:left;"> 3.2.1 </td>
-   <td style="text-align:left;"> 3.2.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tibble </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tibble </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-03-20 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tidyr </td>
-   <td style="text-align:left;"> tidyr </td>
-   <td style="text-align:left;"> 1.3.0 </td>
-   <td style="text-align:left;"> 1.3.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tidyr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tidyr </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-24 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tidyselect </td>
-   <td style="text-align:left;"> tidyselect </td>
-   <td style="text-align:left;"> 1.2.0 </td>
-   <td style="text-align:left;"> 1.2.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tidyselect </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tidyselect </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-10-10 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tidyverse </td>
-   <td style="text-align:left;"> tidyverse </td>
-   <td style="text-align:left;"> 2.0.0 </td>
-   <td style="text-align:left;"> 2.0.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tidyverse </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tidyverse </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-02-22 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> timechange </td>
-   <td style="text-align:left;"> timechange </td>
-   <td style="text-align:left;"> 0.2.0 </td>
-   <td style="text-align:left;"> 0.2.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/timechange </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/timechange </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-11 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tzdb </td>
-   <td style="text-align:left;"> tzdb </td>
-   <td style="text-align:left;"> 0.4.0 </td>
-   <td style="text-align:left;"> 0.4.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tzdb </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/tzdb </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-12 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> urlchecker </td>
-   <td style="text-align:left;"> urlchecker </td>
-   <td style="text-align:left;"> 1.0.1 </td>
-   <td style="text-align:left;"> 1.0.1 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/urlchecker </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/urlchecker </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2021-11-30 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> usethis </td>
-   <td style="text-align:left;"> usethis </td>
-   <td style="text-align:left;"> 2.2.2 </td>
-   <td style="text-align:left;"> 2.2.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/usethis </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/usethis </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-06 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> utf8 </td>
-   <td style="text-align:left;"> utf8 </td>
-   <td style="text-align:left;"> 1.2.3 </td>
-   <td style="text-align:left;"> 1.2.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/utf8 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/utf8 </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-31 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> vctrs </td>
-   <td style="text-align:left;"> vctrs </td>
-   <td style="text-align:left;"> 0.6.3 </td>
-   <td style="text-align:left;"> 0.6.3 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/vctrs </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/vctrs </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-06-14 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> viridisLite </td>
-   <td style="text-align:left;"> viridisLite </td>
-   <td style="text-align:left;"> 0.4.2 </td>
-   <td style="text-align:left;"> 0.4.2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/viridisLite </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/viridisLite </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-05-02 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> webshot </td>
-   <td style="text-align:left;"> webshot </td>
-   <td style="text-align:left;"> 0.5.5 </td>
-   <td style="text-align:left;"> 0.5.5 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/webshot </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/webshot </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-06-26 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> withr </td>
-   <td style="text-align:left;"> withr </td>
-   <td style="text-align:left;"> 2.5.0 </td>
-   <td style="text-align:left;"> 2.5.0 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/withr </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/withr </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2022-03-03 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> xfun </td>
-   <td style="text-align:left;"> xfun </td>
-   <td style="text-align:left;"> 0.39 </td>
-   <td style="text-align:left;"> 0.39 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/xfun </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/xfun </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-04-20 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> xml2 </td>
-   <td style="text-align:left;"> xml2 </td>
-   <td style="text-align:left;"> 1.3.5 </td>
-   <td style="text-align:left;"> 1.3.5 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/xml2 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/xml2 </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-07-06 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> xtable </td>
-   <td style="text-align:left;"> xtable </td>
-   <td style="text-align:left;"> 1.8.4 </td>
-   <td style="text-align:left;"> 1.8-4 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/xtable </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/xtable </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2019-04-21 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.1) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> yaml </td>
-   <td style="text-align:left;"> yaml </td>
-   <td style="text-align:left;"> 2.3.7 </td>
-   <td style="text-align:left;"> 2.3.7 </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/yaml </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries/yaml </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> FALSE </td>
-   <td style="text-align:left;"> 2023-01-23 </td>
-   <td style="text-align:left;"> CRAN (R 4.3.0) </td>
-   <td style="text-align:left;"> TRUE </td>
-   <td style="text-align:left;"> C:/Users/grafmilj/Documents/R-4.0/libraries </td>
-  </tr>
-</tbody>
-</table>
+|             |package      |ondiskversion |loadedversion |path                                                     |loadedpath                                               |attached |is_base |date       |source         |md5ok |library                                     |
+|:------------|:------------|:-------------|:-------------|:--------------------------------------------------------|:--------------------------------------------------------|:--------|:-------|:----------|:--------------|:-----|:-------------------------------------------|
+|abind        |abind        |1.4.5         |1.4-5         |C:/Users/grafmilj/Documents/R-4.0/libraries/abind        |C:/Users/grafmilj/Documents/R-4.0/libraries/abind        |FALSE    |FALSE   |2016-07-21 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|audio        |audio        |0.1.10        |0.1-10        |C:/Users/grafmilj/Documents/R-4.0/libraries/audio        |C:/Users/grafmilj/Documents/R-4.0/libraries/audio        |FALSE    |FALSE   |2021-11-25 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|backports    |backports    |1.4.1         |1.4.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/backports    |C:/Users/grafmilj/Documents/R-4.0/libraries/backports    |FALSE    |FALSE   |2021-12-13 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|base64url    |base64url    |1.4           |1.4           |C:/Users/grafmilj/Documents/R-4.0/libraries/base64url    |C:/Users/grafmilj/Documents/R-4.0/libraries/base64url    |FALSE    |FALSE   |2018-05-14 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|bayestestR   |bayestestR   |0.13.1        |0.13.1        |C:/Users/grafmilj/Documents/R-4.0/libraries/bayestestR   |C:/Users/grafmilj/Documents/R-4.0/libraries/bayestestR   |FALSE    |FALSE   |2023-04-07 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|beepr        |beepr        |1.3           |1.3           |C:/Users/grafmilj/Documents/R-4.0/libraries/beepr        |C:/Users/grafmilj/Documents/R-4.0/libraries/beepr        |FALSE    |FALSE   |2018-06-04 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|beeswarm     |beeswarm     |0.4.0         |0.4.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/beeswarm     |C:/Users/grafmilj/Documents/R-4.0/libraries/beeswarm     |FALSE    |FALSE   |2021-06-01 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|boot         |boot         |1.3.28.1      |1.3-28.1      |C:/Users/grafmilj/Documents/R-4.0/libraries/boot         |C:/Users/grafmilj/Documents/R-4.0/libraries/boot         |FALSE    |FALSE   |2022-11-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|broom        |broom        |1.0.5         |1.0.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/broom        |C:/Users/grafmilj/Documents/R-4.0/libraries/broom        |FALSE    |FALSE   |2023-06-09 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|cachem       |cachem       |1.0.8         |1.0.8         |C:/Users/grafmilj/Documents/R-4.0/libraries/cachem       |C:/Users/grafmilj/Documents/R-4.0/libraries/cachem       |FALSE    |FALSE   |2023-05-01 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|callr        |callr        |3.7.3         |3.7.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/callr        |C:/Users/grafmilj/Documents/R-4.0/libraries/callr        |FALSE    |FALSE   |2022-11-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|car          |car          |3.1.2         |3.1-2         |C:/Users/grafmilj/Documents/R-4.0/libraries/car          |C:/Users/grafmilj/Documents/R-4.0/libraries/car          |FALSE    |FALSE   |2023-03-30 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|carData      |carData      |3.0.5         |3.0-5         |C:/Users/grafmilj/Documents/R-4.0/libraries/carData      |C:/Users/grafmilj/Documents/R-4.0/libraries/carData      |FALSE    |FALSE   |2022-01-06 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|cli          |cli          |3.6.1         |3.6.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/cli          |C:/Users/grafmilj/Documents/R-4.0/libraries/cli          |FALSE    |FALSE   |2023-03-23 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|coda         |coda         |0.19.4        |0.19-4        |C:/Users/grafmilj/Documents/R-4.0/libraries/coda         |C:/Users/grafmilj/Documents/R-4.0/libraries/coda         |FALSE    |FALSE   |2020-09-30 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|codetools    |codetools    |0.2.19        |0.2-19        |C:/Users/grafmilj/Documents/R-4.0/libraries/codetools    |C:/Users/grafmilj/Documents/R-4.0/libraries/codetools    |FALSE    |FALSE   |2023-02-01 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|colorspace   |colorspace   |2.1.0         |2.1-0         |C:/Users/grafmilj/Documents/R-4.0/libraries/colorspace   |C:/Users/grafmilj/Documents/R-4.0/libraries/colorspace   |FALSE    |FALSE   |2023-01-23 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|crayon       |crayon       |1.5.2         |1.5.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/crayon       |C:/Users/grafmilj/Documents/R-4.0/libraries/crayon       |FALSE    |FALSE   |2022-09-29 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|data.table   |data.table   |1.14.8        |1.14.8        |C:/Users/grafmilj/Documents/R-4.0/libraries/data.table   |C:/Users/grafmilj/Documents/R-4.0/libraries/data.table   |FALSE    |FALSE   |2023-02-17 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|datawizard   |datawizard   |0.8.0         |0.8.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/datawizard   |C:/Users/grafmilj/Documents/R-4.0/libraries/datawizard   |FALSE    |FALSE   |2023-06-16 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|DBI          |DBI          |1.1.3         |1.1.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/DBI          |C:/Users/grafmilj/Documents/R-4.0/libraries/DBI          |FALSE    |FALSE   |2022-06-18 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|devtools     |devtools     |2.4.5         |2.4.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/devtools     |C:/Users/grafmilj/Documents/R-4.0/libraries/devtools     |FALSE    |FALSE   |2022-10-11 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|digest       |digest       |0.6.33        |0.6.33        |C:/Users/grafmilj/Documents/R-4.0/libraries/digest       |C:/Users/grafmilj/Documents/R-4.0/libraries/digest       |FALSE    |FALSE   |2023-07-07 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|directlabels |directlabels |2021.1.13     |2021.1.13     |C:/Users/grafmilj/Documents/R-4.0/libraries/directlabels |C:/Users/grafmilj/Documents/R-4.0/libraries/directlabels |TRUE     |FALSE   |2021-01-16 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|dplyr        |dplyr        |1.1.2         |1.1.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/dplyr        |C:/Users/grafmilj/Documents/R-4.0/libraries/dplyr        |TRUE     |FALSE   |2023-04-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|effects      |effects      |4.2.2         |4.2-2         |C:/Users/grafmilj/Documents/R-4.0/libraries/effects      |C:/Users/grafmilj/Documents/R-4.0/libraries/effects      |FALSE    |FALSE   |2022-07-13 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ellipsis     |ellipsis     |0.3.2         |0.3.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/ellipsis     |C:/Users/grafmilj/Documents/R-4.0/libraries/ellipsis     |FALSE    |FALSE   |2021-04-29 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|emmeans      |emmeans      |1.8.7         |1.8.7         |C:/Users/grafmilj/Documents/R-4.0/libraries/emmeans      |C:/Users/grafmilj/Documents/R-4.0/libraries/emmeans      |FALSE    |FALSE   |2023-06-23 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|estimability |estimability |1.4.1         |1.4.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/estimability |C:/Users/grafmilj/Documents/R-4.0/libraries/estimability |FALSE    |FALSE   |2022-08-05 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|extrafont    |extrafont    |0.19          |0.19          |C:/Users/grafmilj/Documents/R-4.0/libraries/extrafont    |C:/Users/grafmilj/Documents/R-4.0/libraries/extrafont    |FALSE    |FALSE   |2023-01-18 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|extrafontdb  |extrafontdb  |1.0           |1.0           |C:/Users/grafmilj/Documents/R-4.0/libraries/extrafontdb  |C:/Users/grafmilj/Documents/R-4.0/libraries/extrafontdb  |FALSE    |FALSE   |2012-06-11 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|fansi        |fansi        |1.0.4         |1.0.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/fansi        |C:/Users/grafmilj/Documents/R-4.0/libraries/fansi        |FALSE    |FALSE   |2023-01-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|farver       |farver       |2.1.1         |2.1.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/farver       |C:/Users/grafmilj/Documents/R-4.0/libraries/farver       |FALSE    |FALSE   |2022-07-06 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|fastmap      |fastmap      |1.1.1         |1.1.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/fastmap      |C:/Users/grafmilj/Documents/R-4.0/libraries/fastmap      |FALSE    |FALSE   |2023-02-24 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|forcats      |forcats      |1.0.0         |1.0.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/forcats      |C:/Users/grafmilj/Documents/R-4.0/libraries/forcats      |TRUE     |FALSE   |2023-01-29 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|fs           |fs           |1.6.3         |1.6.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/fs           |C:/Users/grafmilj/Documents/R-4.0/libraries/fs           |FALSE    |FALSE   |2023-07-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|furrr        |furrr        |0.3.1         |0.3.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/furrr        |C:/Users/grafmilj/Documents/R-4.0/libraries/furrr        |FALSE    |FALSE   |2022-08-15 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|future       |future       |1.33.0        |1.33.0        |C:/Users/grafmilj/Documents/R-4.0/libraries/future       |C:/Users/grafmilj/Documents/R-4.0/libraries/future       |FALSE    |FALSE   |2023-07-01 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|generics     |generics     |0.1.3         |0.1.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/generics     |C:/Users/grafmilj/Documents/R-4.0/libraries/generics     |FALSE    |FALSE   |2022-07-05 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggbeeswarm   |ggbeeswarm   |0.7.2         |0.7.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggbeeswarm   |C:/Users/grafmilj/Documents/R-4.0/libraries/ggbeeswarm   |TRUE     |FALSE   |2023-04-29 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggcharts     |ggcharts     |0.2.1         |0.2.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggcharts     |C:/Users/grafmilj/Documents/R-4.0/libraries/ggcharts     |FALSE    |FALSE   |2020-05-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggeffects    |ggeffects    |1.2.3         |1.2.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggeffects    |C:/Users/grafmilj/Documents/R-4.0/libraries/ggeffects    |TRUE     |FALSE   |2023-06-11 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|gghalves     |gghalves     |0.1.4         |0.1.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/gghalves     |C:/Users/grafmilj/Documents/R-4.0/libraries/gghalves     |TRUE     |FALSE   |2022-11-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggplot2      |ggplot2      |3.4.2         |3.4.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggplot2      |C:/Users/grafmilj/Documents/R-4.0/libraries/ggplot2      |TRUE     |FALSE   |2023-04-03 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggpubr       |ggpubr       |0.6.0         |0.6.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggpubr       |C:/Users/grafmilj/Documents/R-4.0/libraries/ggpubr       |TRUE     |FALSE   |2023-02-10 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggrepel      |ggrepel      |0.9.3         |0.9.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggrepel      |C:/Users/grafmilj/Documents/R-4.0/libraries/ggrepel      |TRUE     |FALSE   |2023-02-03 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggridges     |ggridges     |0.5.4         |0.5.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggridges     |C:/Users/grafmilj/Documents/R-4.0/libraries/ggridges     |TRUE     |FALSE   |2022-09-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggsignif     |ggsignif     |0.6.4         |0.6.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggsignif     |C:/Users/grafmilj/Documents/R-4.0/libraries/ggsignif     |FALSE    |FALSE   |2022-10-13 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggtext       |ggtext       |0.1.2         |0.1.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggtext       |C:/Users/grafmilj/Documents/R-4.0/libraries/ggtext       |TRUE     |FALSE   |2022-09-16 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ggthemes     |ggthemes     |4.2.4         |4.2.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/ggthemes     |C:/Users/grafmilj/Documents/R-4.0/libraries/ggthemes     |TRUE     |FALSE   |2021-01-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|globals      |globals      |0.16.2        |0.16.2        |C:/Users/grafmilj/Documents/R-4.0/libraries/globals      |C:/Users/grafmilj/Documents/R-4.0/libraries/globals      |FALSE    |FALSE   |2022-11-21 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|glue         |glue         |1.6.2         |1.6.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/glue         |C:/Users/grafmilj/Documents/R-4.0/libraries/glue         |FALSE    |FALSE   |2022-02-24 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|gridExtra    |gridExtra    |2.3           |2.3           |C:/Users/grafmilj/Documents/R-4.0/libraries/gridExtra    |C:/Users/grafmilj/Documents/R-4.0/libraries/gridExtra    |FALSE    |FALSE   |2017-09-09 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|gridtext     |gridtext     |0.1.5         |0.1.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/gridtext     |C:/Users/grafmilj/Documents/R-4.0/libraries/gridtext     |FALSE    |FALSE   |2022-09-16 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|gtable       |gtable       |0.3.3         |0.3.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/gtable       |C:/Users/grafmilj/Documents/R-4.0/libraries/gtable       |FALSE    |FALSE   |2023-03-21 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|haven        |haven        |2.5.3         |2.5.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/haven        |C:/Users/grafmilj/Documents/R-4.0/libraries/haven        |FALSE    |FALSE   |2023-06-30 |CRAN (R 4.3.1) |NA    |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|here         |here         |1.0.1         |1.0.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/here         |C:/Users/grafmilj/Documents/R-4.0/libraries/here         |TRUE     |FALSE   |2020-12-13 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|hms          |hms          |1.1.3         |1.1.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/hms          |C:/Users/grafmilj/Documents/R-4.0/libraries/hms          |FALSE    |FALSE   |2023-03-21 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|htmltools    |htmltools    |0.5.5         |0.5.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/htmltools    |C:/Users/grafmilj/Documents/R-4.0/libraries/htmltools    |FALSE    |FALSE   |2023-03-23 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|htmlwidgets  |htmlwidgets  |1.6.2         |1.6.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/htmlwidgets  |C:/Users/grafmilj/Documents/R-4.0/libraries/htmlwidgets  |FALSE    |FALSE   |2023-03-17 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|httpuv       |httpuv       |1.6.11        |1.6.11        |C:/Users/grafmilj/Documents/R-4.0/libraries/httpuv       |C:/Users/grafmilj/Documents/R-4.0/libraries/httpuv       |FALSE    |FALSE   |2023-05-11 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|igraph       |igraph       |1.5.0.1       |1.5.0.1       |C:/Users/grafmilj/Documents/R-4.0/libraries/igraph       |C:/Users/grafmilj/Documents/R-4.0/libraries/igraph       |FALSE    |FALSE   |2023-07-23 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|insight      |insight      |0.19.3        |0.19.3        |C:/Users/grafmilj/Documents/R-4.0/libraries/insight      |C:/Users/grafmilj/Documents/R-4.0/libraries/insight      |FALSE    |FALSE   |2023-06-29 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|knitr        |knitr        |1.43          |1.43          |C:/Users/grafmilj/Documents/R-4.0/libraries/knitr        |C:/Users/grafmilj/Documents/R-4.0/libraries/knitr        |FALSE    |FALSE   |2023-05-25 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|labeling     |labeling     |0.4.2         |0.4.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/labeling     |C:/Users/grafmilj/Documents/R-4.0/libraries/labeling     |FALSE    |FALSE   |2020-10-20 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|later        |later        |1.3.1         |1.3.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/later        |C:/Users/grafmilj/Documents/R-4.0/libraries/later        |FALSE    |FALSE   |2023-05-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|lattice      |lattice      |0.21.8        |0.21-8        |C:/Users/grafmilj/Documents/R-4.0/libraries/lattice      |C:/Users/grafmilj/Documents/R-4.0/libraries/lattice      |FALSE    |FALSE   |2023-04-05 |CRAN (R 4.2.3) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|lemon        |lemon        |0.4.6         |0.4.6         |C:/Users/grafmilj/Documents/R-4.0/libraries/lemon        |C:/Users/grafmilj/Documents/R-4.0/libraries/lemon        |TRUE     |FALSE   |2022-12-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|lifecycle    |lifecycle    |1.0.3         |1.0.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/lifecycle    |C:/Users/grafmilj/Documents/R-4.0/libraries/lifecycle    |FALSE    |FALSE   |2022-10-07 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|listenv      |listenv      |0.9.0         |0.9.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/listenv      |C:/Users/grafmilj/Documents/R-4.0/libraries/listenv      |FALSE    |FALSE   |2022-12-16 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|lme4         |lme4         |1.1.34        |1.1-34        |C:/Users/grafmilj/Documents/R-4.0/libraries/lme4         |C:/Users/grafmilj/Documents/R-4.0/libraries/lme4         |TRUE     |FALSE   |2023-07-04 |CRAN (R 4.3.1) |NA    |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|lmerTest     |lmerTest     |3.1.3         |3.1-3         |C:/Users/grafmilj/Documents/R-4.0/libraries/lmerTest     |C:/Users/grafmilj/Documents/R-4.0/libraries/lmerTest     |TRUE     |FALSE   |2020-10-23 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|lubridate    |lubridate    |1.9.2         |1.9.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/lubridate    |C:/Users/grafmilj/Documents/R-4.0/libraries/lubridate    |TRUE     |FALSE   |2023-02-10 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|magrittr     |magrittr     |2.0.3         |2.0.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/magrittr     |C:/Users/grafmilj/Documents/R-4.0/libraries/magrittr     |FALSE    |FALSE   |2022-03-30 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|MASS         |MASS         |7.3.60        |7.3-60        |C:/Users/grafmilj/Documents/R-4.0/libraries/MASS         |C:/Users/grafmilj/Documents/R-4.0/libraries/MASS         |FALSE    |FALSE   |2023-05-04 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|Matrix       |Matrix       |1.6.0         |1.6-0         |C:/Users/grafmilj/Documents/R-4.0/libraries/Matrix       |C:/Users/grafmilj/Documents/R-4.0/libraries/Matrix       |TRUE     |FALSE   |2023-07-08 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|memoise      |memoise      |2.0.1         |2.0.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/memoise      |C:/Users/grafmilj/Documents/R-4.0/libraries/memoise      |FALSE    |FALSE   |2021-11-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|mime         |mime         |0.12          |0.12          |C:/Users/grafmilj/Documents/R-4.0/libraries/mime         |C:/Users/grafmilj/Documents/R-4.0/libraries/mime         |FALSE    |FALSE   |2021-09-28 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|miniUI       |miniUI       |0.1.1.1       |0.1.1.1       |C:/Users/grafmilj/Documents/R-4.0/libraries/miniUI       |C:/Users/grafmilj/Documents/R-4.0/libraries/miniUI       |FALSE    |FALSE   |2018-05-18 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|minqa        |minqa        |1.2.5         |1.2.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/minqa        |C:/Users/grafmilj/Documents/R-4.0/libraries/minqa        |FALSE    |FALSE   |2022-10-19 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|mitools      |mitools      |2.4           |2.4           |C:/Users/grafmilj/Documents/R-4.0/libraries/mitools      |C:/Users/grafmilj/Documents/R-4.0/libraries/mitools      |FALSE    |FALSE   |2019-04-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|multcomp     |multcomp     |1.4.25        |1.4-25        |C:/Users/grafmilj/Documents/R-4.0/libraries/multcomp     |C:/Users/grafmilj/Documents/R-4.0/libraries/multcomp     |FALSE    |FALSE   |2023-06-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|munsell      |munsell      |0.5.0         |0.5.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/munsell      |C:/Users/grafmilj/Documents/R-4.0/libraries/munsell      |FALSE    |FALSE   |2018-06-12 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|mvtnorm      |mvtnorm      |1.2.2         |1.2-2         |C:/Users/grafmilj/Documents/R-4.0/libraries/mvtnorm      |C:/Users/grafmilj/Documents/R-4.0/libraries/mvtnorm      |FALSE    |FALSE   |2023-06-08 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|nlme         |nlme         |3.1.162       |3.1-162       |C:/Users/grafmilj/Documents/R-4.0/libraries/nlme         |C:/Users/grafmilj/Documents/R-4.0/libraries/nlme         |FALSE    |FALSE   |2023-01-31 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|nloptr       |nloptr       |2.0.3         |2.0.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/nloptr       |C:/Users/grafmilj/Documents/R-4.0/libraries/nloptr       |FALSE    |FALSE   |2022-05-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|nnet         |nnet         |7.3.19        |7.3-19        |C:/Users/grafmilj/Documents/R-4.0/libraries/nnet         |C:/Users/grafmilj/Documents/R-4.0/libraries/nnet         |FALSE    |FALSE   |2023-05-03 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|numDeriv     |numDeriv     |2016.8.1.1    |2016.8-1.1    |C:/Users/grafmilj/Documents/R-4.0/libraries/numDeriv     |C:/Users/grafmilj/Documents/R-4.0/libraries/numDeriv     |FALSE    |FALSE   |2019-06-06 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|parallelly   |parallelly   |1.36.0        |1.36.0        |C:/Users/grafmilj/Documents/R-4.0/libraries/parallelly   |C:/Users/grafmilj/Documents/R-4.0/libraries/parallelly   |FALSE    |FALSE   |2023-05-26 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|parameters   |parameters   |0.21.1        |0.21.1        |C:/Users/grafmilj/Documents/R-4.0/libraries/parameters   |C:/Users/grafmilj/Documents/R-4.0/libraries/parameters   |TRUE     |FALSE   |2023-05-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|patchwork    |patchwork    |1.1.2         |1.1.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/patchwork    |C:/Users/grafmilj/Documents/R-4.0/libraries/patchwork    |TRUE     |FALSE   |2022-08-19 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|performance  |performance  |0.10.4        |0.10.4        |C:/Users/grafmilj/Documents/R-4.0/libraries/performance  |C:/Users/grafmilj/Documents/R-4.0/libraries/performance  |TRUE     |FALSE   |2023-06-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|pillar       |pillar       |1.9.0         |1.9.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/pillar       |C:/Users/grafmilj/Documents/R-4.0/libraries/pillar       |FALSE    |FALSE   |2023-03-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|pkgbuild     |pkgbuild     |1.4.2         |1.4.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/pkgbuild     |C:/Users/grafmilj/Documents/R-4.0/libraries/pkgbuild     |FALSE    |FALSE   |2023-06-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|pkgconfig    |pkgconfig    |2.0.3         |2.0.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/pkgconfig    |C:/Users/grafmilj/Documents/R-4.0/libraries/pkgconfig    |FALSE    |FALSE   |2019-09-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|pkgload      |pkgload      |1.3.2.1       |1.3.2.1       |C:/Users/grafmilj/Documents/R-4.0/libraries/pkgload      |C:/Users/grafmilj/Documents/R-4.0/libraries/pkgload      |FALSE    |FALSE   |2023-07-08 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|plyr         |plyr         |1.8.8         |1.8.8         |C:/Users/grafmilj/Documents/R-4.0/libraries/plyr         |C:/Users/grafmilj/Documents/R-4.0/libraries/plyr         |FALSE    |FALSE   |2022-11-11 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|prettyunits  |prettyunits  |1.1.1         |1.1.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/prettyunits  |C:/Users/grafmilj/Documents/R-4.0/libraries/prettyunits  |FALSE    |FALSE   |2020-01-24 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|pROC         |pROC         |1.18.4        |1.18.4        |C:/Users/grafmilj/Documents/R-4.0/libraries/pROC         |C:/Users/grafmilj/Documents/R-4.0/libraries/pROC         |FALSE    |FALSE   |2023-07-06 |CRAN (R 4.3.1) |NA    |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|processx     |processx     |3.8.2         |3.8.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/processx     |C:/Users/grafmilj/Documents/R-4.0/libraries/processx     |FALSE    |FALSE   |2023-06-30 |CRAN (R 4.3.1) |NA    |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|profvis      |profvis      |0.3.8         |0.3.8         |C:/Users/grafmilj/Documents/R-4.0/libraries/profvis      |C:/Users/grafmilj/Documents/R-4.0/libraries/profvis      |FALSE    |FALSE   |2023-05-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|promises     |promises     |1.2.0.1       |1.2.0.1       |C:/Users/grafmilj/Documents/R-4.0/libraries/promises     |C:/Users/grafmilj/Documents/R-4.0/libraries/promises     |FALSE    |FALSE   |2021-02-11 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|ps           |ps           |1.7.5         |1.7.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/ps           |C:/Users/grafmilj/Documents/R-4.0/libraries/ps           |FALSE    |FALSE   |2023-04-18 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|purrr        |purrr        |1.0.1         |1.0.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/purrr        |C:/Users/grafmilj/Documents/R-4.0/libraries/purrr        |TRUE     |FALSE   |2023-01-10 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|quadprog     |quadprog     |1.5.8         |1.5-8         |C:/Users/grafmilj/Documents/R-4.0/libraries/quadprog     |C:/Users/grafmilj/Documents/R-4.0/libraries/quadprog     |FALSE    |FALSE   |2019-11-20 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|R6           |R6           |2.5.1         |2.5.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/R6           |C:/Users/grafmilj/Documents/R-4.0/libraries/R6           |FALSE    |FALSE   |2021-08-19 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|Rcpp         |Rcpp         |1.0.11        |1.0.11        |C:/Users/grafmilj/Documents/R-4.0/libraries/Rcpp         |C:/Users/grafmilj/Documents/R-4.0/libraries/Rcpp         |FALSE    |FALSE   |2023-07-06 |CRAN (R 4.3.1) |NA    |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|readr        |readr        |2.1.4         |2.1.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/readr        |C:/Users/grafmilj/Documents/R-4.0/libraries/readr        |TRUE     |FALSE   |2023-02-10 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|remotes      |remotes      |2.4.2.1       |2.4.2.1       |C:/Users/grafmilj/Documents/R-4.0/libraries/remotes      |C:/Users/grafmilj/Documents/R-4.0/libraries/remotes      |FALSE    |FALSE   |2023-07-18 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|report       |report       |0.5.7         |0.5.7         |C:/Users/grafmilj/Documents/R-4.0/libraries/report       |C:/Users/grafmilj/Documents/R-4.0/libraries/report       |TRUE     |FALSE   |2023-03-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|rlang        |rlang        |1.1.1         |1.1.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/rlang        |C:/Users/grafmilj/Documents/R-4.0/libraries/rlang        |FALSE    |FALSE   |2023-04-28 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|rprojroot    |rprojroot    |2.0.3         |2.0.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot    |C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot    |FALSE    |FALSE   |2022-04-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|rsample      |rsample      |1.1.1         |1.1.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/rsample      |C:/Users/grafmilj/Documents/R-4.0/libraries/rsample      |TRUE     |FALSE   |2022-12-07 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|rstatix      |rstatix      |0.7.2         |0.7.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/rstatix      |C:/Users/grafmilj/Documents/R-4.0/libraries/rstatix      |FALSE    |FALSE   |2023-02-01 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|rstudioapi   |rstudioapi   |0.15.0        |0.15.0        |C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi   |C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi   |FALSE    |FALSE   |2023-07-07 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|Rttf2pt1     |Rttf2pt1     |1.3.12        |1.3.12        |C:/Users/grafmilj/Documents/R-4.0/libraries/Rttf2pt1     |C:/Users/grafmilj/Documents/R-4.0/libraries/Rttf2pt1     |FALSE    |FALSE   |2023-01-22 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|sandwich     |sandwich     |3.0.2         |3.0-2         |C:/Users/grafmilj/Documents/R-4.0/libraries/sandwich     |C:/Users/grafmilj/Documents/R-4.0/libraries/sandwich     |FALSE    |FALSE   |2022-06-15 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|scales       |scales       |1.2.1         |1.2.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/scales       |C:/Users/grafmilj/Documents/R-4.0/libraries/scales       |TRUE     |FALSE   |2022-08-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|sessioninfo  |sessioninfo  |1.2.2         |1.2.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/sessioninfo  |C:/Users/grafmilj/Documents/R-4.0/libraries/sessioninfo  |FALSE    |FALSE   |2021-12-06 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|shiny        |shiny        |1.7.4.1       |1.7.4.1       |C:/Users/grafmilj/Documents/R-4.0/libraries/shiny        |C:/Users/grafmilj/Documents/R-4.0/libraries/shiny        |FALSE    |FALSE   |2023-07-06 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|sjlabelled   |sjlabelled   |1.2.0         |1.2.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/sjlabelled   |C:/Users/grafmilj/Documents/R-4.0/libraries/sjlabelled   |FALSE    |FALSE   |2022-04-10 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|slider       |slider       |0.3.0         |0.3.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/slider       |C:/Users/grafmilj/Documents/R-4.0/libraries/slider       |FALSE    |FALSE   |2022-11-16 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|snakecase    |snakecase    |0.11.0        |0.11.0        |C:/Users/grafmilj/Documents/R-4.0/libraries/snakecase    |C:/Users/grafmilj/Documents/R-4.0/libraries/snakecase    |FALSE    |FALSE   |2019-05-25 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|stringi      |stringi      |1.7.12        |1.7.12        |C:/Users/grafmilj/Documents/R-4.0/libraries/stringi      |C:/Users/grafmilj/Documents/R-4.0/libraries/stringi      |TRUE     |FALSE   |2023-01-11 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|stringr      |stringr      |1.5.0         |1.5.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/stringr      |C:/Users/grafmilj/Documents/R-4.0/libraries/stringr      |TRUE     |FALSE   |2022-12-02 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|survey       |survey       |4.2.1         |4.2-1         |C:/Users/grafmilj/Documents/R-4.0/libraries/survey       |C:/Users/grafmilj/Documents/R-4.0/libraries/survey       |FALSE    |FALSE   |2023-05-03 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|survival     |survival     |3.5.5         |3.5-5         |C:/Users/grafmilj/Documents/R-4.0/libraries/survival     |C:/Users/grafmilj/Documents/R-4.0/libraries/survival     |FALSE    |FALSE   |2023-03-12 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|targets      |targets      |1.2.0         |1.2.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/targets      |C:/Users/grafmilj/Documents/R-4.0/libraries/targets      |TRUE     |FALSE   |2023-06-26 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|TH.data      |TH.data      |1.1.2         |1.1-2         |C:/Users/grafmilj/Documents/R-4.0/libraries/TH.data      |C:/Users/grafmilj/Documents/R-4.0/libraries/TH.data      |FALSE    |FALSE   |2023-04-17 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|tibble       |tibble       |3.2.1         |3.2.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/tibble       |C:/Users/grafmilj/Documents/R-4.0/libraries/tibble       |TRUE     |FALSE   |2023-03-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|tidyr        |tidyr        |1.3.0         |1.3.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/tidyr        |C:/Users/grafmilj/Documents/R-4.0/libraries/tidyr        |TRUE     |FALSE   |2023-01-24 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|tidyselect   |tidyselect   |1.2.0         |1.2.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/tidyselect   |C:/Users/grafmilj/Documents/R-4.0/libraries/tidyselect   |FALSE    |FALSE   |2022-10-10 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|tidyverse    |tidyverse    |2.0.0         |2.0.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/tidyverse    |C:/Users/grafmilj/Documents/R-4.0/libraries/tidyverse    |TRUE     |FALSE   |2023-02-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|timechange   |timechange   |0.2.0         |0.2.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/timechange   |C:/Users/grafmilj/Documents/R-4.0/libraries/timechange   |FALSE    |FALSE   |2023-01-11 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|tzdb         |tzdb         |0.4.0         |0.4.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/tzdb         |C:/Users/grafmilj/Documents/R-4.0/libraries/tzdb         |FALSE    |FALSE   |2023-05-12 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|urlchecker   |urlchecker   |1.0.1         |1.0.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/urlchecker   |C:/Users/grafmilj/Documents/R-4.0/libraries/urlchecker   |FALSE    |FALSE   |2021-11-30 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|usethis      |usethis      |2.2.2         |2.2.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/usethis      |C:/Users/grafmilj/Documents/R-4.0/libraries/usethis      |FALSE    |FALSE   |2023-07-06 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|utf8         |utf8         |1.2.3         |1.2.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/utf8         |C:/Users/grafmilj/Documents/R-4.0/libraries/utf8         |FALSE    |FALSE   |2023-01-31 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|vctrs        |vctrs        |0.6.3         |0.6.3         |C:/Users/grafmilj/Documents/R-4.0/libraries/vctrs        |C:/Users/grafmilj/Documents/R-4.0/libraries/vctrs        |FALSE    |FALSE   |2023-06-14 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|vipor        |vipor        |0.4.5         |0.4.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/vipor        |C:/Users/grafmilj/Documents/R-4.0/libraries/vipor        |FALSE    |FALSE   |2017-03-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|warp         |warp         |0.2.0         |0.2.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/warp         |C:/Users/grafmilj/Documents/R-4.0/libraries/warp         |FALSE    |FALSE   |2020-10-21 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|withr        |withr        |2.5.0         |2.5.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/withr        |C:/Users/grafmilj/Documents/R-4.0/libraries/withr        |FALSE    |FALSE   |2022-03-03 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|xfun         |xfun         |0.39          |0.39          |C:/Users/grafmilj/Documents/R-4.0/libraries/xfun         |C:/Users/grafmilj/Documents/R-4.0/libraries/xfun         |FALSE    |FALSE   |2023-04-20 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|xml2         |xml2         |1.3.5         |1.3.5         |C:/Users/grafmilj/Documents/R-4.0/libraries/xml2         |C:/Users/grafmilj/Documents/R-4.0/libraries/xml2         |FALSE    |FALSE   |2023-07-06 |CRAN (R 4.3.1) |NA    |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|xtable       |xtable       |1.8.4         |1.8-4         |C:/Users/grafmilj/Documents/R-4.0/libraries/xtable       |C:/Users/grafmilj/Documents/R-4.0/libraries/xtable       |FALSE    |FALSE   |2019-04-21 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|yaml         |yaml         |2.3.7         |2.3.7         |C:/Users/grafmilj/Documents/R-4.0/libraries/yaml         |C:/Users/grafmilj/Documents/R-4.0/libraries/yaml         |FALSE    |FALSE   |2023-01-23 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
+|zoo          |zoo          |1.8.12        |1.8-12        |C:/Users/grafmilj/Documents/R-4.0/libraries/zoo          |C:/Users/grafmilj/Documents/R-4.0/libraries/zoo          |FALSE    |FALSE   |2023-04-13 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
