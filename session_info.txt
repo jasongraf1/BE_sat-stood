@@ -11,7 +11,7 @@
 |collate  |English_United Kingdom.utf8                               |
 |ctype    |English_United Kingdom.utf8                               |
 |tz       |Europe/London                                             |
-|date     |2023-12-05                                                |
+|date     |2023-12-14                                                |
 |rstudio  |2023.06.0+421 Mountain Hydrangea (desktop)                |
 |pandoc   |3.1.4 @ C:\Users\grafmilj\AppData\Local\Pandoc\pandoc.exe |
 --------------------------------------------------------------------------------
@@ -101,7 +101,6 @@
 |report      |report      |0.5.7         |0.5.7         |C:/Users/grafmilj/Documents/R-4.0/libraries/report      |C:/Users/grafmilj/Documents/R-4.0/libraries/report      |FALSE    |FALSE   |2023-03-22 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
 |rlang       |rlang       |1.1.2         |1.1.2         |C:/Users/grafmilj/Documents/R-4.0/libraries/rlang       |C:/Users/grafmilj/Documents/R-4.0/libraries/rlang       |FALSE    |FALSE   |2023-11-04 |CRAN (R 4.3.2) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
 |rprojroot   |rprojroot   |2.0.4         |2.0.4         |C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot   |C:/Users/grafmilj/Documents/R-4.0/libraries/rprojroot   |FALSE    |FALSE   |2023-11-05 |CRAN (R 4.3.2) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
-|rsconnect   |rsconnect   |1.1.1         |1.1.1         |C:/Users/grafmilj/Documents/R-4.0/libraries/rsconnect   |C:/Users/grafmilj/Documents/R-4.0/libraries/rsconnect   |FALSE    |FALSE   |2023-10-04 |CRAN (R 4.3.2) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
 |rstudioapi  |rstudioapi  |0.15.0        |0.15.0        |C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi  |C:/Users/grafmilj/Documents/R-4.0/libraries/rstudioapi  |FALSE    |FALSE   |2023-07-07 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
 |Rttf2pt1    |Rttf2pt1    |1.3.12        |1.3.12        |C:/Users/grafmilj/Documents/R-4.0/libraries/Rttf2pt1    |C:/Users/grafmilj/Documents/R-4.0/libraries/Rttf2pt1    |FALSE    |FALSE   |2023-01-22 |CRAN (R 4.3.0) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
 |scales      |scales      |1.3.0         |1.3.0         |C:/Users/grafmilj/Documents/R-4.0/libraries/scales      |C:/Users/grafmilj/Documents/R-4.0/libraries/scales      |FALSE    |FALSE   |2023-11-28 |CRAN (R 4.3.1) |TRUE  |C:/Users/grafmilj/Documents/R-4.0/libraries |
