@@ -7,40 +7,49 @@ platform:
   collate: English_United Kingdom.utf8
   ctype: English_United Kingdom.utf8
   tz: Europe/London
-  date: '2026-04-29'
+  date: '2026-04-30'
   rstudio: 2026.01.0+392 Apple Blossom (desktop)
   pandoc: 3.6.3 @ C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools/ (via
     rmarkdown)
-  quarto: 'ERROR: Unknown command "TMPDIR=C:/Users/grafmilj/AppData/Local/Temp/RtmpY3MrPR/file6b042b6974c9".
+  quarto: 'ERROR: Unknown command "TMPDIR=C:/Users/grafmilj/AppData/Local/Temp/Rtmp4UbjTY/file73e858e14e6b".
     Did you mean command "install"? @ C:\Users\grafmilj\AppData\Local\Programs\Quarto\bin\quarto.exe'
 packages:
   package:
   - abind
-  - askpass
   - backports
+  - base64enc
   - beeswarm
   - broom
   - cachem
   - car
   - carData
+  - cartography
+  - checkmate
+  - class
+  - classInt
   - cli
-  - credentials
+  - cluster
+  - colorspace
+  - commonmark
   - data.table
+  - DBI
   - devtools
   - dichromat
   - digest
   - directlabels
   - dplyr
+  - e1071
   - ellipsis
   - evaluate
   - farver
   - fastmap
   - forcats
+  - foreign
   - Formula
   - fs
   - generics
-  - gert
   - ggbeeswarm
+  - ggcharts
   - gghalves
   - ggmosaic
   - ggplot2
@@ -55,22 +64,30 @@ packages:
   - gridtext
   - gtable
   - here
+  - Hmisc
   - hms
+  - htmlTable
   - htmltools
   - htmlwidgets
   - httr
   - janitor
   - jsonlite
   - kableExtra
+  - KernSmooth
   - knitr
+  - labeling
   - lattice
   - lazyeval
   - lemon
   - lifecycle
+  - litedown
   - lubridate
   - magrittr
+  - maplegend
+  - mapsf
+  - markdown
   - memoise
-  - openssl
+  - nnet
   - otel
   - patchwork
   - pillar
@@ -78,7 +95,9 @@ packages:
   - pkgconfig
   - pkgload
   - plotly
+  - plotrix
   - plyr
+  - proxy
   - purrr
   - quadprog
   - R6
@@ -88,18 +107,21 @@ packages:
   - remotes
   - rlang
   - rmarkdown
+  - rpart
   - rprojroot
   - rsconnect
   - rstatix
   - rstudioapi
+  - s2
   - S7
   - scales
   - sessioninfo
+  - sf
   - snakecase
+  - sp
   - stringi
   - stringr
   - svglite
-  - sys
   - systemfonts
   - textshaping
   - tibble
@@ -108,41 +130,52 @@ packages:
   - tidyverse
   - timechange
   - tzdb
+  - units
   - usethis
+  - utf8
   - vctrs
   - vipor
   - viridisLite
   - withr
+  - wk
   - xfun
   - xml2
-  - yaml
   ondiskversion:
   - 1.4.8
-  - 1.2.1
   - 1.5.0
+  - 0.1.3
   - 0.4.0
   - 1.0.11
   - 1.1.0
   - 3.1.3
   - 3.0.5
+  - 3.1.5
+  - 2.3.3
+  - 7.3.23
+  - 0.4.11
   - 3.6.5
-  - 2.0.3
+  - 2.1.8.1
+  - 2.1.2
+  - 2.0.0
   - 1.18.0
+  - 1.2.3
   - 2.4.6
   - 2.0.0.1
   - 0.6.39
   - 2025.6.24
   - 1.1.4
+  - 1.7.17
   - 0.3.2
   - 1.0.5
   - 2.1.2
   - 1.2.0
   - 1.0.1
+  - 0.8.90
   - 1.2.5
   - 1.6.6
   - 0.1.4
-  - 2.3.0
   - 0.7.3
+  - 0.2.1
   - 0.1.4
   - 0.3.3
   - 4.0.1
@@ -157,22 +190,30 @@ packages:
   - 0.1.5
   - 0.3.6
   - 1.0.2
+  - 5.2.5
   - 1.1.4
+  - 2.4.3
   - 0.5.9
   - 1.6.4
   - 1.4.7
   - 2.2.1
   - 2.0.0
   - 1.4.0
+  - 2.23.26
   - '1.51'
+  - 0.4.3
   - 0.22.7
   - 0.2.2
   - 0.5.2
   - 1.0.5
+  - '0.9'
   - 1.9.4
   - 2.0.4
+  - 0.4.0
+  - 1.0.0
+  - '2.0'
   - 2.0.1
-  - 2.3.4
+  - 7.3.20
   - 0.2.0
   - 1.3.2
   - 1.11.1
@@ -180,7 +221,9 @@ packages:
   - 2.0.3
   - 1.4.1
   - 4.11.0
+  - 3.8.13
   - 1.8.9
+  - 0.4.29
   - 1.2.1
   - 1.5.8
   - 2.6.1
@@ -190,18 +233,21 @@ packages:
   - 2.5.0
   - 1.1.6
   - '2.30'
+  - 4.1.24
   - 2.1.1
   - 1.7.0
   - 0.7.3
   - 0.17.1
+  - 1.1.9
   - 0.2.1
   - 1.4.0
   - 1.2.3
+  - 1.0.23
   - 0.11.1
+  - 2.2.0
   - 1.8.7
   - 1.6.0
   - 2.2.2
-  - 3.4.3
   - 1.3.1
   - 1.0.4
   - 3.3.0
@@ -210,41 +256,52 @@ packages:
   - 2.0.0
   - 0.3.0
   - 0.5.0
+  - 1.0.0
   - 3.2.1
+  - 1.2.6
   - 0.6.5
   - 0.4.7
   - 0.4.2
   - 3.0.2
+  - 0.9.5
   - '0.55'
   - 1.5.1
-  - 2.3.12
   loadedversion:
   - 1.4-8
-  - 1.2.1
   - 1.5.0
+  - 0.1-3
   - 0.4.0
   - 1.0.11
   - 1.1.0
   - 3.1-3
   - 3.0-5
+  - 3.1.5
+  - 2.3.3
+  - 7.3-23
+  - 0.4-11
   - 3.6.5
-  - 2.0.3
+  - 2.1.8.1
+  - 2.1-2
+  - 2.0.0
   - 1.18.0
+  - 1.2.3
   - 2.4.6
   - 2.0-0.1
   - 0.6.39
   - 2025.6.24
   - 1.1.4
+  - 1.7-17
   - 0.3.2
   - 1.0.5
   - 2.1.2
   - 1.2.0
   - 1.0.1
+  - 0.8-90
   - 1.2-5
   - 1.6.6
   - 0.1.4
-  - 2.3.0
   - 0.7.3
+  - 0.2.1
   - 0.1.4
   - 0.3.3
   - 4.0.1
@@ -259,22 +316,30 @@ packages:
   - 0.1.5
   - 0.3.6
   - 1.0.2
+  - 5.2-5
   - 1.1.4
+  - 2.4.3
   - 0.5.9
   - 1.6.4
   - 1.4.7
   - 2.2.1
   - 2.0.0
   - 1.4.0
+  - 2.23-26
   - '1.51'
+  - 0.4.3
   - 0.22-7
   - 0.2.2
   - 0.5.2
   - 1.0.5
+  - '0.9'
   - 1.9.4
   - 2.0.4
+  - 0.4.0
+  - 1.0.0
+  - '2.0'
   - 2.0.1
-  - 2.3.4
+  - 7.3-20
   - 0.2.0
   - 1.3.2
   - 1.11.1
@@ -282,7 +347,9 @@ packages:
   - 2.0.3
   - 1.4.1
   - 4.11.0
+  - 3.8-13
   - 1.8.9
+  - 0.4-29
   - 1.2.1
   - 1.5-8
   - 2.6.1
@@ -292,18 +359,21 @@ packages:
   - 2.5.0
   - 1.1.6
   - '2.30'
+  - 4.1.24
   - 2.1.1
   - 1.7.0
   - 0.7.3
   - 0.17.1
+  - 1.1.9
   - 0.2.1
   - 1.4.0
   - 1.2.3
+  - 1.0-23
   - 0.11.1
+  - 2.2-0
   - 1.8.7
   - 1.6.0
   - 2.2.2
-  - 3.4.3
   - 1.3.1
   - 1.0.4
   - 3.3.0
@@ -312,41 +382,52 @@ packages:
   - 2.0.0
   - 0.3.0
   - 0.5.0
+  - 1.0-0
   - 3.2.1
+  - 1.2.6
   - 0.6.5
   - 0.4.7
   - 0.4.2
   - 3.0.2
+  - 0.9.5
   - '0.55'
   - 1.5.1
-  - 2.3.12
   path:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/abind
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/askpass
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/backports
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/base64enc
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/beeswarm
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/broom
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cachem
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/car
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/carData
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cartography
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/checkmate
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/class
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/classInt
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cli
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/credentials
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cluster
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/colorspace
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/commonmark
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/data.table
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/DBI
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/devtools
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/dichromat
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/digest
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/directlabels
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/dplyr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/e1071
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ellipsis
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/evaluate
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/farver
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/fastmap
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/forcats
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/foreign
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/Formula
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/fs
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/generics
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gert
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggbeeswarm
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggcharts
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gghalves
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggmosaic
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggplot2
@@ -361,22 +442,30 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gridtext
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gtable
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/here
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/Hmisc
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/hms
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/htmlTable
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/htmltools
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/htmlwidgets
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/httr
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/janitor
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/jsonlite
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/kableExtra
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/KernSmooth
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/knitr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/labeling
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lattice
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lazyeval
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lemon
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lifecycle
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/litedown
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lubridate
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/magrittr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/maplegend
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/mapsf
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/markdown
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/memoise
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/openssl
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/nnet
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/otel
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/patchwork
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/pillar
@@ -384,7 +473,9 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/pkgconfig
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/pkgload
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/plotly
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/plotrix
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/plyr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/proxy
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/purrr
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/quadprog
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/R6
@@ -394,18 +485,21 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/remotes
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rlang
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rmarkdown
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rpart
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rprojroot
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rsconnect
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rstatix
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rstudioapi
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/s2
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/S7
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/scales
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sessioninfo
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sf
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/snakecase
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sp
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/stringi
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/stringr
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/svglite
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sys
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/systemfonts
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/textshaping
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/tibble
@@ -414,41 +508,52 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/tidyverse
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/timechange
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/tzdb
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/units
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/usethis
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/utf8
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/vctrs
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/vipor
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/viridisLite
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/withr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/wk
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/xfun
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/xml2
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/yaml
   loadedpath:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/abind
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/askpass
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/backports
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/base64enc
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/beeswarm
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/broom
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cachem
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/car
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/carData
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cartography
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/checkmate
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/class
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/classInt
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cli
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/credentials
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/cluster
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/colorspace
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/commonmark
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/data.table
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/DBI
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/devtools
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/dichromat
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/digest
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/directlabels
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/dplyr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/e1071
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ellipsis
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/evaluate
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/farver
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/fastmap
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/forcats
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/foreign
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/Formula
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/fs
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/generics
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gert
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggbeeswarm
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggcharts
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gghalves
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggmosaic
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/ggplot2
@@ -463,22 +568,30 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gridtext
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/gtable
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/here
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/Hmisc
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/hms
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/htmlTable
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/htmltools
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/htmlwidgets
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/httr
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/janitor
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/jsonlite
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/kableExtra
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/KernSmooth
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/knitr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/labeling
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lattice
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lazyeval
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lemon
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lifecycle
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/litedown
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/lubridate
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/magrittr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/maplegend
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/mapsf
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/markdown
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/memoise
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/openssl
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/nnet
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/otel
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/patchwork
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/pillar
@@ -486,7 +599,9 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/pkgconfig
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/pkgload
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/plotly
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/plotrix
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/plyr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/proxy
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/purrr
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/quadprog
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/R6
@@ -496,18 +611,21 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/remotes
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rlang
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rmarkdown
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rpart
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rprojroot
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rsconnect
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rstatix
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/rstudioapi
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/s2
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/S7
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/scales
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sessioninfo
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sf
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/snakecase
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sp
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/stringi
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/stringr
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/svglite
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/sys
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/systemfonts
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/textshaping
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/tibble
@@ -516,14 +634,16 @@ packages:
   - C:/Users/grafmilj/Documents/R-4.0/libraries/tidyverse
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/timechange
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/tzdb
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/units
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/usethis
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/utf8
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/vctrs
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/vipor
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/viridisLite
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/withr
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/wk
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/xfun
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/xml2
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library/yaml
   attached:
   - no
   - no
@@ -533,6 +653,13 @@ packages:
   - no
   - no
   - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
   - no
   - no
   - no
@@ -545,24 +672,6 @@ packages:
   - no
   - no
   - no
-  - yes
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - no
-  - yes
-  - yes
-  - no
-  - no
-  - no
   - no
   - yes
   - no
@@ -570,41 +679,13 @@ packages:
   - no
   - no
   - yes
-  - no
   - yes
   - yes
-  - no
-  - no
   - yes
-  - no
   - yes
-  - no
-  - no
-  - no
-  - no
   - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
   - yes
-  - no
-  - no
-  - no
-  - no
   - yes
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - no
-  - yes
-  - no
   - no
   - yes
   - yes
@@ -615,7 +696,70 @@ packages:
   - yes
   - yes
   - no
+  - no
+  - no
+  - no
+  - no
   - yes
+  - no
+  - yes
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - yes
+  - no
+  - no
+  - no
+  - yes
+  - yes
+  - no
+  - yes
+  - no
+  - no
   - no
   - no
   - no
@@ -728,33 +872,66 @@ packages:
   - no
   - no
   - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
   date:
   - '2024-09-12'
-  - '2024-10-04'
   - '2024-05-23'
+  - '2015-07-28'
   - '2021-06-01'
   - '2025-12-04'
   - '2024-05-16'
   - '2024-09-27'
   - '2022-01-06'
+  - '2025-07-23'
+  - '2025-08-18'
+  - '2025-01-01'
+  - '2025-01-08'
   - '2025-04-23'
-  - '2025-09-12'
+  - '2025-03-12'
+  - '2025-09-22'
+  - '2025-07-07'
   - '2025-12-24'
+  - '2024-06-02'
   - '2025-10-03'
   - '2022-05-02'
   - '2025-11-19'
   - '2025-06-24'
   - '2023-11-17'
+  - '2025-12-18'
   - '2021-04-29'
   - '2025-08-27'
   - '2024-05-13'
   - '2024-05-15'
   - '2025-09-25'
+  - '2025-03-31'
   - '2023-02-24'
   - '2025-04-12'
   - '2025-05-09'
-  - '2026-01-08'
   - '2025-11-29'
+  - '2020-05-20'
   - '2022-11-20'
   - '2021-02-23'
   - '2025-11-14'
@@ -769,22 +946,30 @@ packages:
   - '2022-09-16'
   - '2024-10-25'
   - '2025-09-15'
+  - '2026-01-09'
   - '2025-10-17'
+  - '2024-07-21'
   - '2025-12-04'
   - '2023-12-06'
   - '2023-08-15'
   - '2024-12-22'
   - '2025-03-27'
   - '2024-01-24'
+  - '2025-01-01'
   - '2025-12-20'
+  - '2023-08-29'
   - '2025-04-02'
   - '2019-03-15'
   - '2025-09-04'
   - '2026-01-08'
+  - '2025-12-18'
   - '2024-12-08'
   - '2025-09-12'
+  - '2025-12-04'
+  - '2025-07-01'
+  - '2025-03-23'
   - '2021-11-26'
-  - '2025-09-30'
+  - '2025-01-01'
   - '2025-08-29'
   - '2025-08-25'
   - '2025-09-17'
@@ -792,7 +977,9 @@ packages:
   - '2019-09-22'
   - '2025-09-23'
   - '2025-06-19'
+  - '2025-11-15'
   - '2023-10-02'
+  - '2025-12-29'
   - '2026-01-09'
   - '2019-11-20'
   - '2025-02-15'
@@ -802,18 +989,21 @@ packages:
   - '2024-03-17'
   - '2025-04-11'
   - '2025-09-28'
+  - '2025-01-07'
   - '2025-08-26'
   - '2025-12-06'
   - '2025-10-18'
   - '2024-10-22'
+  - '2025-05-23'
   - '2025-11-14'
   - '2025-04-24'
   - '2025-02-05'
+  - '2025-11-28'
   - '2023-08-27'
+  - '2025-02-01'
   - '2025-03-27'
   - '2025-11-04'
   - '2025-10-21'
-  - '2024-10-04'
   - '2025-10-01'
   - '2025-10-10'
   - '2025-06-08'
@@ -822,14 +1012,16 @@ packages:
   - '2023-02-22'
   - '2024-01-18'
   - '2025-03-15'
+  - '2025-10-09'
   - '2025-09-06'
+  - '2025-06-08'
   - '2023-12-01'
   - '2023-12-18'
   - '2023-05-02'
   - '2024-10-28'
+  - '2025-12-18'
   - '2025-12-16'
   - '2025-12-01'
-  - '2025-12-10'
   source:
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
@@ -839,71 +1031,46 @@ packages:
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
   - CRAN (R 4.5.1)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.1)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.1)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.1)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.1)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.2)
-  - CRAN (R 4.5.0)
   - CRAN (R 4.5.1)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.0)
-  - CRAN (R 4.5.1)
   - CRAN (R 4.5.0)
-  - CRAN (R 4.5.2)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.1)
   - CRAN (R 4.5.1)
-  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
   - CRAN (R 4.5.0)
-  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
   - CRAN (R 4.5.1)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.0)
+  - CRAN (R 4.5.1)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.1)
   - CRAN (R 4.5.2)
-  - CRAN (R 4.5.1)
   - CRAN (R 4.5.0)
-  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
   - CRAN (R 4.5.1)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.2)
@@ -913,9 +1080,56 @@ packages:
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.1)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.2)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.1)
@@ -924,6 +1138,8 @@ packages:
   - CRAN (R 4.5.2)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
+  - CRAN (R 4.5.2)
+  - CRAN (R 4.5.1)
   - CRAN (R 4.5.1)
   - CRAN (R 4.5.0)
   - CRAN (R 4.5.0)
@@ -943,42 +1159,7 @@ packages:
   - yes
   - yes
   - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
   - .na
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
-  - yes
   - yes
   - yes
   - .na
@@ -1002,6 +1183,65 @@ packages:
   - yes
   - yes
   - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
   - yes
   - yes
   - yes
@@ -1066,56 +1306,6 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/Documents/R-4.0/libraries
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
-  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
@@ -1126,6 +1316,80 @@ packages:
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/Documents/R-4.0/libraries
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
+  - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
   - C:/Users/grafmilj/AppData/Local/Programs/R/R-4.5.2/library
